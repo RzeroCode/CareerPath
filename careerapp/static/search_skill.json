@@ -1,0 +1,8502 @@
+{
+    "computer science": [
+        {
+            "skill_name": "Microsoft Azure",
+            "count": 5
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "iOS",
+            "count": 17
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "System Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Git",
+            "count": 47
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "Embedded Software",
+            "count": 1
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "Real-Time Operating Systems (RTOS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Engineering",
+            "count": 4
+        },
+        {
+            "skill_name": "LaTeX",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "Programming",
+            "count": 10
+        },
+        {
+            "skill_name": "Android",
+            "count": 27
+        },
+        {
+            "skill_name": "Web Services",
+            "count": 9
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Structures",
+            "count": 2
+        },
+        {
+            "skill_name": "Web Development",
+            "count": 4
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "XML",
+            "count": 6
+        },
+        {
+            "skill_name": "Game Development",
+            "count": 6
+        },
+        {
+            "skill_name": "OpenGL",
+            "count": 0
+        },
+        {
+            "skill_name": "NetBeans",
+            "count": 0
+        },
+        {
+            "skill_name": "Azure DevOps Server",
+            "count": 0
+        },
+        {
+            "skill_name": "ASP.NET",
+            "count": 5
+        },
+        {
+            "skill_name": "Spring Framework",
+            "count": 6
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "Design Patterns",
+            "count": 13
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Subversion",
+            "count": 0
+        },
+        {
+            "skill_name": "Flex",
+            "count": 16
+        },
+        {
+            "skill_name": "JavaServer Faces (JSF)",
+            "count": 0
+        },
+        {
+            "skill_name": "Juggling",
+            "count": 0
+        },
+        {
+            "skill_name": "NoSQL",
+            "count": 19
+        },
+        {
+            "skill_name": "Photography",
+            "count": 0
+        },
+        {
+            "skill_name": "Capoeira",
+            "count": 0
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Unit Testing",
+            "count": 6
+        },
+        {
+            "skill_name": "NumPy",
+            "count": 5
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Objective-C",
+            "count": 3
+        },
+        {
+            "skill_name": "Bonjour",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "Geographic Information Systems (GIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Boost C++",
+            "count": 0
+        },
+        {
+            "skill_name": "CVS",
+            "count": 1
+        },
+        {
+            "skill_name": "JUnit",
+            "count": 16
+        },
+        {
+            "skill_name": "RabbitMQ",
+            "count": 17
+        },
+        {
+            "skill_name": "Requirements Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Redis",
+            "count": 29
+        },
+        {
+            "skill_name": "Enterprise Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Solution Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSocket",
+            "count": 2
+        },
+        {
+            "skill_name": "C++0x",
+            "count": 0
+        },
+        {
+            "skill_name": "Transact-SQL (T-SQL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Requirements Gathering",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Devices",
+            "count": 0
+        },
+        {
+            "skill_name": "Application Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Session Initiation Protocol (SIP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Unix",
+            "count": 8
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Visual Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "Technology Roadmapping",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Application Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Integration",
+            "count": 14
+        },
+        {
+            "skill_name": "Pattern Recognition",
+            "count": 0
+        },
+        {
+            "skill_name": "Service-Oriented Architecture (SOA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Tomcat",
+            "count": 1
+        },
+        {
+            "skill_name": "Debugging",
+            "count": 2
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Performance Tuning",
+            "count": 0
+        },
+        {
+            "skill_name": "Hibernate",
+            "count": 8
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "PostgreSQL",
+            "count": 18
+        },
+        {
+            "skill_name": "J2EE Web Services",
+            "count": 0
+        },
+        {
+            "skill_name": "Representational State Transfer (REST)",
+            "count": 0
+        },
+        {
+            "skill_name": "JFace",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Ext JS",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "Printed Circuit Board (PCB) Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Embedded C++",
+            "count": 0
+        },
+        {
+            "skill_name": "FreeRTOS",
+            "count": 0
+        },
+        {
+            "skill_name": "LLVM",
+            "count": 0
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "Compiler Optimization",
+            "count": 0
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Artificial Neural Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Big Data",
+            "count": 5
+        },
+        {
+            "skill_name": "Data Science",
+            "count": 6
+        },
+        {
+            "skill_name": "Multi-agent Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Distributed Systems",
+            "count": 1
+        },
+        {
+            "skill_name": "Sybase IQ",
+            "count": 0
+        },
+        {
+            "skill_name": "TensorFlow",
+            "count": 3
+        },
+        {
+            "skill_name": "Keras",
+            "count": 2
+        },
+        {
+            "skill_name": "Visual Basic .NET (VB.NET)",
+            "count": 0
+        },
+        {
+            "skill_name": "jQuery",
+            "count": 0
+        },
+        {
+            "skill_name": "SOAP",
+            "count": 7
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Sports Coaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-View-Controller (MVC)",
+            "count": 1
+        },
+        {
+            "skill_name": "Scalable Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Creative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Delivery",
+            "count": 0
+        },
+        {
+            "skill_name": "Leadership",
+            "count": 3
+        },
+        {
+            "skill_name": "Anomaly Detection",
+            "count": 0
+        },
+        {
+            "skill_name": "Compressive Sensing",
+            "count": 0
+        },
+        {
+            "skill_name": "Signal Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "Mobile Application Development",
+            "count": 0
+        },
+        {
+            "skill_name": "React Native",
+            "count": 7
+        },
+        {
+            "skill_name": "AngularJS",
+            "count": 5
+        },
+        {
+            "skill_name": "React.js",
+            "count": 6
+        },
+        {
+            "skill_name": "Maven",
+            "count": 10
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "SID",
+            "count": 0
+        },
+        {
+            "skill_name": "Extract, Transform, Load (ETL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecom BSS",
+            "count": 0
+        },
+        {
+            "skill_name": "TAM",
+            "count": 0
+        },
+        {
+            "skill_name": "Mockito",
+            "count": 15
+        },
+        {
+            "skill_name": "Java Database Connectivity (JDBC)",
+            "count": 0
+        },
+        {
+            "skill_name": "MongoDB",
+            "count": 11
+        },
+        {
+            "skill_name": "Model-view-viewmodel (MVVM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Presentation Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet of Things (IoT)",
+            "count": 3
+        },
+        {
+            "skill_name": "JavaFX",
+            "count": 0
+        },
+        {
+            "skill_name": "Hive",
+            "count": 6
+        },
+        {
+            "skill_name": "Apache Pig",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Support System (BSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Visio",
+            "count": 12
+        },
+        {
+            "skill_name": "Computer Engineering",
+            "count": 46
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Privacy",
+            "count": 1
+        },
+        {
+            "skill_name": "Docker Products",
+            "count": 0
+        },
+        {
+            "skill_name": "DevOps",
+            "count": 8
+        },
+        {
+            "skill_name": "Containerization",
+            "count": 1
+        },
+        {
+            "skill_name": "ERP Implementations",
+            "count": 0
+        },
+        {
+            "skill_name": "JSON",
+            "count": 13
+        },
+        {
+            "skill_name": "Kotlin",
+            "count": 13
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "Vue.js",
+            "count": 4
+        },
+        {
+            "skill_name": "Software",
+            "count": 57
+        },
+        {
+            "skill_name": "Recommender Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Optimization",
+            "count": 3
+        },
+        {
+            "skill_name": "GAMS",
+            "count": 0
+        },
+        {
+            "skill_name": "Neo4j",
+            "count": 1
+        },
+        {
+            "skill_name": "Knime",
+            "count": 0
+        },
+        {
+            "skill_name": "Numerical Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Graph Databases",
+            "count": 0
+        },
+        {
+            "skill_name": "Value-Added Services (VAS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Vendor Management",
+            "count": 0
+        },
+        {
+            "skill_name": "IPTV",
+            "count": 0
+        },
+        {
+            "skill_name": "Solution Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Open Source Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategy",
+            "count": 1
+        },
+        {
+            "skill_name": "Marketing Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Go-to-market Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Communications",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Entrepreneurship",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing Budget Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "PL/SQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Data Modeling",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Analytics",
+            "count": 6
+        },
+        {
+            "skill_name": "Jakarta EE",
+            "count": 0
+        },
+        {
+            "skill_name": "Confluence",
+            "count": 4
+        },
+        {
+            "skill_name": "Relational Databases",
+            "count": 0
+        },
+        {
+            "skill_name": "Robot Operating System (ROS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Application Programming Interfaces",
+            "count": 0
+        },
+        {
+            "skill_name": "RESTful WebServices",
+            "count": 0
+        },
+        {
+            "skill_name": "ZeroMQ",
+            "count": 0
+        },
+        {
+            "skill_name": "Jenkins",
+            "count": 8
+        },
+        {
+            "skill_name": "Go (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Back-End Web Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Toad",
+            "count": 0
+        },
+        {
+            "skill_name": "Technical Design",
+            "count": 0
+        },
+        {
+            "skill_name": "RStudio",
+            "count": 0
+        },
+        {
+            "skill_name": "R (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Gerrit",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM Db2",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Financials",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Enterprise Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "DHTML",
+            "count": 0
+        },
+        {
+            "skill_name": "Pascal",
+            "count": 0
+        },
+        {
+            "skill_name": "BizTalk",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows System Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Cluster Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Objects Data Integrator",
+            "count": 0
+        },
+        {
+            "skill_name": "Smoke Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Spring Batch",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSphere",
+            "count": 0
+        },
+        {
+            "skill_name": "Manual Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Primefaces",
+            "count": 0
+        }
+    ],
+    "computer engineer": [
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "ASP.NET",
+            "count": 5
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "XML",
+            "count": 6
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "LaTeX",
+            "count": 0
+        },
+        {
+            "skill_name": "Programming",
+            "count": 10
+        },
+        {
+            "skill_name": "Hadoop",
+            "count": 14
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "Git",
+            "count": 47
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Maven",
+            "count": 10
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Docker Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Databases",
+            "count": 15
+        },
+        {
+            "skill_name": "Web Services",
+            "count": 9
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Reinforcement Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "SOLIDWORKS",
+            "count": 0
+        },
+        {
+            "skill_name": "Neo4j",
+            "count": 1
+        },
+        {
+            "skill_name": "Application Servers",
+            "count": 0
+        },
+        {
+            "skill_name": "Full Text Search",
+            "count": 0
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "Cybersecurity",
+            "count": 1
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "Cisco Systems Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Security",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Design",
+            "count": 0
+        },
+        {
+            "skill_name": "MongoDB",
+            "count": 11
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Open Source Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Jakarta EE",
+            "count": 0
+        },
+        {
+            "skill_name": "Embedded Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Qbasic",
+            "count": 0
+        },
+        {
+            "skill_name": "Visual Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "Spring Framework",
+            "count": 6
+        },
+        {
+            "skill_name": "Design Patterns",
+            "count": 13
+        },
+        {
+            "skill_name": "JavaServer Faces (JSF)",
+            "count": 0
+        },
+        {
+            "skill_name": "Subversion",
+            "count": 0
+        },
+        {
+            "skill_name": "JUnit",
+            "count": 16
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "Requirements Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "MIL-STD-498",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Struts",
+            "count": 0
+        },
+        {
+            "skill_name": "jQuery",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-View-Controller (MVC)",
+            "count": 1
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Unix",
+            "count": 8
+        },
+        {
+            "skill_name": "Web Applications",
+            "count": 3
+        },
+        {
+            "skill_name": "Virtualization",
+            "count": 4
+        },
+        {
+            "skill_name": "Hibernate",
+            "count": 8
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Cassandra",
+            "count": 14
+        },
+        {
+            "skill_name": "PostgreSQL",
+            "count": 18
+        },
+        {
+            "skill_name": "Shell Scripting",
+            "count": 1
+        },
+        {
+            "skill_name": "Computer Engineering",
+            "count": 46
+        },
+        {
+            "skill_name": "Adobe Photoshop",
+            "count": 0
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "Chronicles",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analytics",
+            "count": 6
+        },
+        {
+            "skill_name": "Emacs Lisp",
+            "count": 0
+        },
+        {
+            "skill_name": "Metaheuristics",
+            "count": 0
+        },
+        {
+            "skill_name": "Classification",
+            "count": 0
+        },
+        {
+            "skill_name": "Operations Research",
+            "count": 0
+        },
+        {
+            "skill_name": "Mathematical Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Compiler Construction",
+            "count": 0
+        },
+        {
+            "skill_name": "NoSQL",
+            "count": 19
+        },
+        {
+            "skill_name": "WebLogic",
+            "count": 0
+        },
+        {
+            "skill_name": "Service-Oriented Architecture (SOA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Tomcat",
+            "count": 1
+        },
+        {
+            "skill_name": "Debugging",
+            "count": 2
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Performance Tuning",
+            "count": 0
+        },
+        {
+            "skill_name": "Enterprise Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "SharePoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Big Data",
+            "count": 5
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Arithmetic",
+            "count": 0
+        },
+        {
+            "skill_name": "Cisco Certified",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Load Balancing",
+            "count": 0
+        },
+        {
+            "skill_name": "Aruba Wireless",
+            "count": 0
+        },
+        {
+            "skill_name": "Cisco 6500",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Servers",
+            "count": 0
+        },
+        {
+            "skill_name": "Ruckus",
+            "count": 0
+        },
+        {
+            "skill_name": "Quantum Mechanics",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Products",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Web Development",
+            "count": 4
+        },
+        {
+            "skill_name": "Tortoise SVN",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSphere ESB",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecom BSS",
+            "count": 0
+        },
+        {
+            "skill_name": "Natural Language Processing (NLP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Embedded Software",
+            "count": 1
+        },
+        {
+            "skill_name": "Printed Circuit Board (PCB) Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Embedded C++",
+            "count": 0
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Structures",
+            "count": 2
+        },
+        {
+            "skill_name": "Teamwork",
+            "count": 10
+        },
+        {
+            "skill_name": "Teaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Fiddler",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "IntelliJ IDEA",
+            "count": 0
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "TensorFlow",
+            "count": 3
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Android",
+            "count": 27
+        },
+        {
+            "skill_name": "Gradle",
+            "count": 4
+        },
+        {
+            "skill_name": "JSON",
+            "count": 13
+        },
+        {
+            "skill_name": "Verilog",
+            "count": 0
+        },
+        {
+            "skill_name": "Web Design",
+            "count": 1
+        },
+        {
+            "skill_name": "Jenkins",
+            "count": 8
+        },
+        {
+            "skill_name": "Back-End Web Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Representational State Transfer (REST)",
+            "count": 0
+        },
+        {
+            "skill_name": "PL/SQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Public Speaking",
+            "count": 0
+        },
+        {
+            "skill_name": "User Interface Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Device Management",
+            "count": 0
+        },
+        {
+            "skill_name": "JDK",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytics",
+            "count": 15
+        },
+        {
+            "skill_name": "Adaptation",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Data Science",
+            "count": 6
+        },
+        {
+            "skill_name": "Solution Selling",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Partnerships",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Capability Maturity Model Integration (CMMI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Unit Testing",
+            "count": 6
+        },
+        {
+            "skill_name": "NumPy",
+            "count": 5
+        },
+        {
+            "skill_name": "OpenGL",
+            "count": 0
+        },
+        {
+            "skill_name": "Matplotlib",
+            "count": 0
+        },
+        {
+            "skill_name": "Swift (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Apache Spark",
+            "count": 0
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Communication",
+            "count": 16
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "Servlets",
+            "count": 0
+        },
+        {
+            "skill_name": "Transact-SQL (T-SQL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Supplier Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Visio",
+            "count": 12
+        },
+        {
+            "skill_name": "Visual Basic for Applications (VBA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Project",
+            "count": 0
+        },
+        {
+            "skill_name": "Recommender Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Application Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-view-viewmodel (MVVM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Modeling",
+            "count": 1
+        },
+        {
+            "skill_name": "Firebase",
+            "count": 1
+        },
+        {
+            "skill_name": "Unity",
+            "count": 15
+        },
+        {
+            "skill_name": "SQLite",
+            "count": 0
+        },
+        {
+            "skill_name": "Vue.js",
+            "count": 4
+        },
+        {
+            "skill_name": "JavaFX",
+            "count": 0
+        },
+        {
+            "skill_name": "VMware",
+            "count": 1
+        },
+        {
+            "skill_name": "Network Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol Suite (TCP/IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Multiprotocol Label Switching (MPLS)",
+            "count": 0
+        },
+        {
+            "skill_name": "OpenStack",
+            "count": 1
+        },
+        {
+            "skill_name": "VMWare ESXi",
+            "count": 0
+        },
+        {
+            "skill_name": "REST APIs",
+            "count": 2
+        },
+        {
+            "skill_name": "Marketing Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Objective-C",
+            "count": 3
+        },
+        {
+            "skill_name": "Research and Development (R&D)",
+            "count": 0
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "Windows Server",
+            "count": 6
+        },
+        {
+            "skill_name": "Red Hat Linux",
+            "count": 0
+        },
+        {
+            "skill_name": "Active Directory",
+            "count": 0
+        },
+        {
+            "skill_name": "Domain Name System (DNS)",
+            "count": 0
+        },
+        {
+            "skill_name": "LAN Switching",
+            "count": 0
+        },
+        {
+            "skill_name": "Zabbix",
+            "count": 1
+        },
+        {
+            "skill_name": "IT Operations",
+            "count": 1
+        },
+        {
+            "skill_name": "HP Service Manager",
+            "count": 0
+        },
+        {
+            "skill_name": "Domain Controller",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Operations Manager",
+            "count": 0
+        },
+        {
+            "skill_name": "Group Policy",
+            "count": 0
+        },
+        {
+            "skill_name": "UAV",
+            "count": 0
+        },
+        {
+            "skill_name": "Apache Kafka",
+            "count": 0
+        },
+        {
+            "skill_name": "React.js",
+            "count": 6
+        },
+        {
+            "skill_name": "Distributed Systems",
+            "count": 1
+        },
+        {
+            "skill_name": "TypeScript",
+            "count": 6
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Media Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Consulting",
+            "count": 4
+        },
+        {
+            "skill_name": "Bash",
+            "count": 5
+        },
+        {
+            "skill_name": "Business Intelligence (BI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Warehousing",
+            "count": 1
+        },
+        {
+            "skill_name": "JavaServer Pages (JSP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Technology",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "SOAP",
+            "count": 7
+        },
+        {
+            "skill_name": "Statistical Data Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "R (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Informatica",
+            "count": 1
+        },
+        {
+            "skill_name": "Extract, Transform, Load (ETL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Discrete Mathematics",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Management System (DBMS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Video Editing",
+            "count": 0
+        },
+        {
+            "skill_name": "Statistics",
+            "count": 23
+        },
+        {
+            "skill_name": "Photography",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Sybase Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Decision-Making",
+            "count": 0
+        },
+        {
+            "skill_name": "COBIT",
+            "count": 1
+        },
+        {
+            "skill_name": "Automic (Software)",
+            "count": 0
+        },
+        {
+            "skill_name": "Ranorex",
+            "count": 0
+        },
+        {
+            "skill_name": "Selenium",
+            "count": 4
+        },
+        {
+            "skill_name": "JMeter",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM Db2",
+            "count": 0
+        },
+        {
+            "skill_name": "Information Technology",
+            "count": 31
+        },
+        {
+            "skill_name": "Business Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Process Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Communication",
+            "count": 0
+        },
+        {
+            "skill_name": "AngularJS",
+            "count": 5
+        },
+        {
+            "skill_name": "Banking Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Security",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Management Information Systems (MIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL Server Integration Services (SSIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Intelligence Tools",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle SQL Developer",
+            "count": 0
+        },
+        {
+            "skill_name": "Spring Boot",
+            "count": 16
+        },
+        {
+            "skill_name": "Enterprise JavaBeans (EJB)",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSphere",
+            "count": 0
+        },
+        {
+            "skill_name": "Atlassian Bamboo",
+            "count": 0
+        },
+        {
+            "skill_name": "Intelligence",
+            "count": 4
+        },
+        {
+            "skill_name": "SAP BusinessObjects",
+            "count": 0
+        },
+        {
+            "skill_name": "Financials",
+            "count": 0
+        },
+        {
+            "skill_name": "CVS",
+            "count": 1
+        },
+        {
+            "skill_name": "Commercial Lending",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Teaching English as a Foreign Language",
+            "count": 0
+        }
+    ],
+    "information technology": [
+        {
+            "skill_name": "Software Documentation",
+            "count": 0
+        },
+        {
+            "skill_name": "XML",
+            "count": 6
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relations",
+            "count": 0
+        },
+        {
+            "skill_name": "Security",
+            "count": 26
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Documentation",
+            "count": 4
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "Integration",
+            "count": 14
+        },
+        {
+            "skill_name": "Planning",
+            "count": 4
+        },
+        {
+            "skill_name": "Coordinating Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Contract Negotiation",
+            "count": 0
+        },
+        {
+            "skill_name": "ASP.NET",
+            "count": 5
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Change Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "Big Data",
+            "count": 5
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Signal Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "Programming",
+            "count": 10
+        },
+        {
+            "skill_name": "Mind Mapping",
+            "count": 0
+        },
+        {
+            "skill_name": "E-commerce",
+            "count": 3
+        },
+        {
+            "skill_name": "Brand Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Entrepreneurship",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Sales & Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Partner Relationship Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "JavaSE",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Operations",
+            "count": 1
+        },
+        {
+            "skill_name": "Internet Protocol Suite (TCP/IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Cross-functional Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Process Improvement",
+            "count": 0
+        },
+        {
+            "skill_name": "Lync",
+            "count": 0
+        },
+        {
+            "skill_name": "Object-oriented Software",
+            "count": 0
+        },
+        {
+            "skill_name": "OpenStack",
+            "count": 1
+        },
+        {
+            "skill_name": "Amazon CloudFront",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Warehouse Management Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Third-Party Logistics (3PL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Development",
+            "count": 1
+        },
+        {
+            "skill_name": "Web Applications",
+            "count": 3
+        },
+        {
+            "skill_name": "Product Management",
+            "count": 1
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "Android",
+            "count": 27
+        },
+        {
+            "skill_name": "Social Media",
+            "count": 0
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "Docker Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Databases",
+            "count": 15
+        },
+        {
+            "skill_name": "VMware",
+            "count": 1
+        },
+        {
+            "skill_name": "Virtualization",
+            "count": 4
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Google Ads",
+            "count": 0
+        },
+        {
+            "skill_name": "Google Analytics",
+            "count": 1
+        },
+        {
+            "skill_name": "Information Technology",
+            "count": 31
+        },
+        {
+            "skill_name": "Customer Service",
+            "count": 0
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Design Patterns",
+            "count": 13
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "Portfolio Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Linux System Administration",
+            "count": 1
+        },
+        {
+            "skill_name": "Network Security",
+            "count": 0
+        },
+        {
+            "skill_name": "jQuery",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Apache Ant",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "JUnit",
+            "count": 16
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "SQL DB2",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Architectural Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Mathematics",
+            "count": 29
+        },
+        {
+            "skill_name": "Mathematical Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Statistics",
+            "count": 23
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "Neural Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Science",
+            "count": 6
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Convolutional Neural Networks (CNN)",
+            "count": 0
+        },
+        {
+            "skill_name": "Machine Learning Algorithms",
+            "count": 1
+        },
+        {
+            "skill_name": "User Experience (UX)",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Support",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Creative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Usability Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Launch",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Product Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Shell Scripting",
+            "count": 1
+        },
+        {
+            "skill_name": "Subversion",
+            "count": 0
+        },
+        {
+            "skill_name": "WordPress",
+            "count": 1
+        },
+        {
+            "skill_name": "Market Intelligence",
+            "count": 0
+        },
+        {
+            "skill_name": "Adobe Photoshop",
+            "count": 0
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Technology Roadmapping",
+            "count": 0
+        },
+        {
+            "skill_name": "Leading Development Teams",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Streaming Media",
+            "count": 0
+        },
+        {
+            "skill_name": "KPI Implementation",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Reporting & Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Growth Strategies",
+            "count": 0
+        },
+        {
+            "skill_name": "Diversity & Inclusion",
+            "count": 0
+        },
+        {
+            "skill_name": "Continuous Integration",
+            "count": 8
+        },
+        {
+            "skill_name": "Direct Sales",
+            "count": 0
+        },
+        {
+            "skill_name": "Solution Selling",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Devices",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Hibernate",
+            "count": 8
+        },
+        {
+            "skill_name": "JFace",
+            "count": 0
+        },
+        {
+            "skill_name": "Ext JS",
+            "count": 0
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "Storage Area Network (SAN)",
+            "count": 0
+        },
+        {
+            "skill_name": "3D Printing",
+            "count": 0
+        },
+        {
+            "skill_name": "NoSQL",
+            "count": 19
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Containerization",
+            "count": 1
+        },
+        {
+            "skill_name": "Raspberry Pi",
+            "count": 0
+        },
+        {
+            "skill_name": "High Availability",
+            "count": 0
+        },
+        {
+            "skill_name": "Network-Attached Storage (NAS)",
+            "count": 0
+        },
+        {
+            "skill_name": "VMWare ESXi",
+            "count": 0
+        },
+        {
+            "skill_name": "Replication",
+            "count": 0
+        },
+        {
+            "skill_name": "NetApp",
+            "count": 5
+        },
+        {
+            "skill_name": "Storage Solutions",
+            "count": 0
+        },
+        {
+            "skill_name": "RAID",
+            "count": 0
+        },
+        {
+            "skill_name": "Storage Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Fibre Channel",
+            "count": 0
+        },
+        {
+            "skill_name": "iSCSI",
+            "count": 0
+        },
+        {
+            "skill_name": "Cucumber",
+            "count": 2
+        },
+        {
+            "skill_name": "Windows",
+            "count": 12
+        },
+        {
+            "skill_name": "Software Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Selenium WebDriver",
+            "count": 0
+        },
+        {
+            "skill_name": "CMMI Level 5",
+            "count": 0
+        },
+        {
+            "skill_name": "Kaizen",
+            "count": 0
+        },
+        {
+            "skill_name": "Lean Management",
+            "count": 0
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Geospatial Data",
+            "count": 0
+        },
+        {
+            "skill_name": "Geographic Information Systems (GIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "Revit",
+            "count": 0
+        },
+        {
+            "skill_name": "KiCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSphere ESB",
+            "count": 0
+        },
+        {
+            "skill_name": "SOA Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "WebSphere MQ",
+            "count": 0
+        },
+        {
+            "skill_name": "Provisioning",
+            "count": 0
+        },
+        {
+            "skill_name": "Regression Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Statistical Data Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "R (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Electrical Engineering",
+            "count": 6
+        },
+        {
+            "skill_name": "Electronics",
+            "count": 4
+        },
+        {
+            "skill_name": "Manufacturing",
+            "count": 1
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "Network Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Multiprotocol Label Switching (MPLS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "DWDM",
+            "count": 0
+        },
+        {
+            "skill_name": "iOS",
+            "count": 17
+        },
+        {
+            "skill_name": "Model-view-viewmodel (MVVM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-View-Controller (MVC)",
+            "count": 1
+        },
+        {
+            "skill_name": "App Store",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Viper",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Objective-C",
+            "count": 3
+        },
+        {
+            "skill_name": "Spring Framework",
+            "count": 6
+        },
+        {
+            "skill_name": "Redis",
+            "count": 29
+        },
+        {
+            "skill_name": "SOAP",
+            "count": 7
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "PL/SQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Telecommunications Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Java Database Connectivity (JDBC)",
+            "count": 0
+        },
+        {
+            "skill_name": "RabbitMQ",
+            "count": 17
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "Proteus",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Media Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Consulting",
+            "count": 4
+        },
+        {
+            "skill_name": "Web Design",
+            "count": 1
+        },
+        {
+            "skill_name": "Sony Vegas Video",
+            "count": 0
+        },
+        {
+            "skill_name": "Radio Frequency (RF)",
+            "count": 0
+        },
+        {
+            "skill_name": "Optimization",
+            "count": 3
+        },
+        {
+            "skill_name": "GSM",
+            "count": 0
+        },
+        {
+            "skill_name": "Transmission",
+            "count": 0
+        },
+        {
+            "skill_name": "3G",
+            "count": 0
+        },
+        {
+            "skill_name": "Antennas",
+            "count": 0
+        },
+        {
+            "skill_name": "Universal Mobile Telecommunications System (UMTS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Code Division Multiple Access Method (CDMA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Support System (BSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Key Performance Indicators",
+            "count": 0
+        },
+        {
+            "skill_name": "General Packet Radio Service (GPRS)",
+            "count": 0
+        },
+        {
+            "skill_name": "2G",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Risk",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Poetry",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Commercial Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Loans",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Extract, Transform, Load (ETL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Migration",
+            "count": 0
+        },
+        {
+            "skill_name": "Informatica",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Modeling",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Quality",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Warehousing",
+            "count": 1
+        },
+        {
+            "skill_name": "Business Intelligence (BI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Risk",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Design",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Audit",
+            "count": 4
+        },
+        {
+            "skill_name": "Database Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "ICAAP",
+            "count": 0
+        },
+        {
+            "skill_name": "Gretl",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Governance",
+            "count": 0
+        },
+        {
+            "skill_name": "Continuous Auditing",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analytics",
+            "count": 6
+        },
+        {
+            "skill_name": "Strategy",
+            "count": 1
+        },
+        {
+            "skill_name": "Artificial Neural Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Online Advertising",
+            "count": 0
+        },
+        {
+            "skill_name": "Atlassian Bamboo",
+            "count": 0
+        },
+        {
+            "skill_name": "DevOps",
+            "count": 8
+        },
+        {
+            "skill_name": "Enterprise Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Linear Regression",
+            "count": 0
+        },
+        {
+            "skill_name": "International Financial Reporting Standards (IFRS)",
+            "count": 0
+        },
+        {
+            "skill_name": "SAS Programming",
+            "count": 0
+        },
+        {
+            "skill_name": "Transact-SQL (T-SQL)",
+            "count": 0
+        },
+        {
+            "skill_name": "SAS",
+            "count": 18
+        },
+        {
+            "skill_name": "SAS Base",
+            "count": 0
+        },
+        {
+            "skill_name": "SAS E-Miner",
+            "count": 0
+        },
+        {
+            "skill_name": "Negotiation",
+            "count": 0
+        },
+        {
+            "skill_name": "Enterprise Risk Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Trade Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit",
+            "count": 0
+        },
+        {
+            "skill_name": "Finance",
+            "count": 2
+        },
+        {
+            "skill_name": "Corporate Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Health Insurance",
+            "count": 0
+        },
+        {
+            "skill_name": "General Insurance",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Management Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Reinsurance",
+            "count": 0
+        },
+        {
+            "skill_name": "Visio",
+            "count": 12
+        },
+        {
+            "skill_name": "Product Liability",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Server",
+            "count": 6
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Modeling",
+            "count": 1
+        },
+        {
+            "skill_name": "Industrial Engineering",
+            "count": 8
+        },
+        {
+            "skill_name": "Simulations",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM SPSS",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Project",
+            "count": 0
+        },
+        {
+            "skill_name": "Operations Research",
+            "count": 0
+        },
+        {
+            "skill_name": "Mathematical Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Six Sigma",
+            "count": 0
+        },
+        {
+            "skill_name": "Arena Simulation Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP BusinessObjects",
+            "count": 0
+        },
+        {
+            "skill_name": "Insurance",
+            "count": 1
+        },
+        {
+            "skill_name": "Professional Liability",
+            "count": 0
+        },
+        {
+            "skill_name": "Performance Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Underwriting",
+            "count": 0
+        },
+        {
+            "skill_name": "Actuarial Science",
+            "count": 0
+        },
+        {
+            "skill_name": "BO Web Intelligence",
+            "count": 0
+        },
+        {
+            "skill_name": "Visual Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "ServiceNow",
+            "count": 0
+        },
+        {
+            "skill_name": "SharePoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Transformation",
+            "count": 3
+        },
+        {
+            "skill_name": "Web Analytics",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Requirements Management",
+            "count": 0
+        },
+        {
+            "skill_name": "User-centered Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Tourism",
+            "count": 0
+        },
+        {
+            "skill_name": "Budgeting",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales Management",
+            "count": 0
+        },
+        {
+            "skill_name": "New Business Development",
+            "count": 0
+        }
+    ],
+    "computer software engineering": [
+        {
+            "skill_name": "Microsoft Azure",
+            "count": 5
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "iOS",
+            "count": 17
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "System Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Distributed Systems",
+            "count": 1
+        },
+        {
+            "skill_name": "Design Patterns",
+            "count": 13
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Web Applications",
+            "count": 3
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "Visual Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Git",
+            "count": 47
+        },
+        {
+            "skill_name": "NoSQL",
+            "count": 19
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "Objective-C",
+            "count": 3
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "Continuous Integration",
+            "count": 8
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Rally",
+            "count": 0
+        },
+        {
+            "skill_name": "Web Scraping",
+            "count": 0
+        },
+        {
+            "skill_name": "MongoDB",
+            "count": 11
+        },
+        {
+            "skill_name": "JUnit",
+            "count": 16
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Web Services",
+            "count": 9
+        },
+        {
+            "skill_name": "Juggling",
+            "count": 0
+        },
+        {
+            "skill_name": "Photography",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Capoeira",
+            "count": 0
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Android",
+            "count": 27
+        },
+        {
+            "skill_name": "Data Structures",
+            "count": 2
+        },
+        {
+            "skill_name": "Unit Testing",
+            "count": 6
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "NumPy",
+            "count": 5
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "XML",
+            "count": 6
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Bonjour",
+            "count": 0
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Integration",
+            "count": 14
+        },
+        {
+            "skill_name": "Product Management",
+            "count": 1
+        },
+        {
+            "skill_name": "User Experience (UX)",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Customer Support",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Creative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Devices",
+            "count": 0
+        },
+        {
+            "skill_name": "Session Initiation Protocol (SIP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Crowdsourcing",
+            "count": 0
+        },
+        {
+            "skill_name": "E-commerce",
+            "count": 3
+        },
+        {
+            "skill_name": "Media Evaluation",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "English as a Second Language (ESL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Big Data",
+            "count": 5
+        },
+        {
+            "skill_name": "Transcription",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Media",
+            "count": 0
+        },
+        {
+            "skill_name": "Translation",
+            "count": 0
+        },
+        {
+            "skill_name": "WordPress",
+            "count": 1
+        },
+        {
+            "skill_name": "D3.js",
+            "count": 0
+        },
+        {
+            "skill_name": "Swift (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "React.js",
+            "count": 6
+        },
+        {
+            "skill_name": "React Native",
+            "count": 7
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "Business Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Crystal Ball",
+            "count": 0
+        },
+        {
+            "skill_name": "Control Charts",
+            "count": 0
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Visual Basic .NET (VB.NET)",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "jQuery",
+            "count": 0
+        },
+        {
+            "skill_name": "Competitive Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Redux.js",
+            "count": 0
+        },
+        {
+            "skill_name": "HTML5",
+            "count": 24
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "Computer Engineering",
+            "count": 46
+        },
+        {
+            "skill_name": "Leadership",
+            "count": 3
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Ruby on Rails",
+            "count": 0
+        },
+        {
+            "skill_name": "Very-Large-Scale Integration (VLSI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Ruby",
+            "count": 1
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Bash",
+            "count": 5
+        },
+        {
+            "skill_name": "Core Java",
+            "count": 1
+        },
+        {
+            "skill_name": "Test Automation",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Quality Assurance",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-View-Controller (MVC)",
+            "count": 1
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "Servlets",
+            "count": 0
+        },
+        {
+            "skill_name": "RESTful WebServices",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Delivery",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "ClearCase",
+            "count": 0
+        },
+        {
+            "skill_name": "Signaling System 7 (SS7)",
+            "count": 0
+        },
+        {
+            "skill_name": "Technical Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Foreign Languages",
+            "count": 0
+        },
+        {
+            "skill_name": "Ecosystem",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "International Business",
+            "count": 0
+        },
+        {
+            "skill_name": "Russian",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet of Things (IoT)",
+            "count": 3
+        },
+        {
+            "skill_name": "Solution Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Mandarin",
+            "count": 0
+        },
+        {
+            "skill_name": "Partner Relationship Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Shell Scripting",
+            "count": 1
+        },
+        {
+            "skill_name": "Subversion",
+            "count": 0
+        },
+        {
+            "skill_name": "Apache Pig",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Game Design",
+            "count": 1
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Migration",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL Tuning",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle RAC",
+            "count": 0
+        },
+        {
+            "skill_name": "RMAN",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "Databases",
+            "count": 15
+        },
+        {
+            "skill_name": "PL/SQL",
+            "count": 10
+        },
+        {
+            "skill_name": "IBM Db2",
+            "count": 0
+        },
+        {
+            "skill_name": "Service-Oriented Architecture (SOA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Extract, Transform, Load (ETL)",
+            "count": 0
+        },
+        {
+            "skill_name": "High Availability",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Continuity",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Assessment",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Cybersecurity",
+            "count": 1
+        },
+        {
+            "skill_name": "Cyber",
+            "count": 8
+        },
+        {
+            "skill_name": "Penetration Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "CISA",
+            "count": 6
+        },
+        {
+            "skill_name": "COBIT",
+            "count": 1
+        },
+        {
+            "skill_name": "Auditing",
+            "count": 0
+        },
+        {
+            "skill_name": "ISO 27001",
+            "count": 5
+        },
+        {
+            "skill_name": "Incident Response",
+            "count": 1
+        },
+        {
+            "skill_name": "Information Security Management",
+            "count": 0
+        },
+        {
+            "skill_name": "ITIL",
+            "count": 4
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Process Improvement",
+            "count": 0
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Presentation Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Grocery",
+            "count": 0
+        },
+        {
+            "skill_name": "Requirements Gathering",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Communications",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Testing Life Cycle (STLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Regression Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Manual Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Azure DevOps Server",
+            "count": 0
+        },
+        {
+            "skill_name": "ASP.NET",
+            "count": 5
+        },
+        {
+            "skill_name": "Data Guard",
+            "count": 0
+        },
+        {
+            "skill_name": "Exadata",
+            "count": 5
+        },
+        {
+            "skill_name": "Performance Tuning",
+            "count": 0
+        },
+        {
+            "skill_name": "Red Hat Linux",
+            "count": 0
+        },
+        {
+            "skill_name": "Troubleshooting",
+            "count": 1
+        }
+    ],
+    "Electrical and Electronics Engineering": [
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Android",
+            "count": 27
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "LaTeX",
+            "count": 0
+        },
+        {
+            "skill_name": "Git",
+            "count": 47
+        },
+        {
+            "skill_name": "Simulations",
+            "count": 0
+        },
+        {
+            "skill_name": "Robot Operating System (ROS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Engineering",
+            "count": 4
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Financial Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "CMake",
+            "count": 0
+        },
+        {
+            "skill_name": "Application-Specific Integrated Circuits (ASIC)",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP BI",
+            "count": 0
+        },
+        {
+            "skill_name": "Management Accounting",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Universal Verification Methodology (UVM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Reporting",
+            "count": 0
+        },
+        {
+            "skill_name": "Very-Large-Scale Integration (VLSI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Signal Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "VHDL",
+            "count": 0
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "Wireless Technologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "Product Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Programming",
+            "count": 10
+        },
+        {
+            "skill_name": "Embedded Software",
+            "count": 1
+        },
+        {
+            "skill_name": "Microcontrollers",
+            "count": 0
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronics",
+            "count": 4
+        },
+        {
+            "skill_name": "Embedded Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "Web Services",
+            "count": 9
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Unix",
+            "count": 8
+        },
+        {
+            "skill_name": "Financial Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Electrical Engineering",
+            "count": 6
+        },
+        {
+            "skill_name": "Completion",
+            "count": 0
+        },
+        {
+            "skill_name": "RSVP-TE",
+            "count": 0
+        },
+        {
+            "skill_name": "Leadership",
+            "count": 3
+        },
+        {
+            "skill_name": "Scuba Diving",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Simulation",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytics",
+            "count": 15
+        },
+        {
+            "skill_name": "Multiprotocol Label Switching (MPLS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Signal Processing",
+            "count": 0
+        },
+        {
+            "skill_name": "Scripting",
+            "count": 3
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "L2VPN",
+            "count": 0
+        },
+        {
+            "skill_name": "Wireless Communications Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Simulink",
+            "count": 0
+        },
+        {
+            "skill_name": "Software",
+            "count": 57
+        },
+        {
+            "skill_name": "Open Source Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Graphic Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "Automation",
+            "count": 2
+        },
+        {
+            "skill_name": "Computer Network Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Optical Transmission",
+            "count": 0
+        },
+        {
+            "skill_name": "Fiber Optics",
+            "count": 0
+        },
+        {
+            "skill_name": "GSM",
+            "count": 0
+        },
+        {
+            "skill_name": "Transmission",
+            "count": 0
+        },
+        {
+            "skill_name": "Optical Fiber",
+            "count": 0
+        },
+        {
+            "skill_name": "Synchronous Digital Hierarchy (SDH)",
+            "count": 0
+        },
+        {
+            "skill_name": "Ethernet",
+            "count": 0
+        },
+        {
+            "skill_name": "B2B Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing Analytics",
+            "count": 0
+        },
+        {
+            "skill_name": "Core Network",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales & Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Shell Scripting",
+            "count": 1
+        },
+        {
+            "skill_name": "Functional Programming",
+            "count": 0
+        },
+        {
+            "skill_name": "Groovy",
+            "count": 3
+        },
+        {
+            "skill_name": "Lua",
+            "count": 0
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Distributed Systems",
+            "count": 1
+        },
+        {
+            "skill_name": "Hibernate",
+            "count": 8
+        },
+        {
+            "skill_name": "Spring Framework",
+            "count": 6
+        },
+        {
+            "skill_name": "Distributed Algorithms",
+            "count": 0
+        },
+        {
+            "skill_name": "Field-Programmable Gate Arrays (FPGA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Relays",
+            "count": 0
+        },
+        {
+            "skill_name": "Radio Frequency (RF)",
+            "count": 0
+        },
+        {
+            "skill_name": "OFDMA",
+            "count": 0
+        },
+        {
+            "skill_name": "Cellular Communications",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "WiMAX",
+            "count": 0
+        },
+        {
+            "skill_name": "System Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Bluetooth",
+            "count": 0
+        },
+        {
+            "skill_name": "Orthogonal Frequency-Division Multiplexing (OFDM)",
+            "count": 0
+        },
+        {
+            "skill_name": "PHY",
+            "count": 0
+        },
+        {
+            "skill_name": "4G",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "International Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "Purchasing Negotiation",
+            "count": 0
+        },
+        {
+            "skill_name": "Adobe Photoshop",
+            "count": 0
+        },
+        {
+            "skill_name": "Trading",
+            "count": 1
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "SketchUp",
+            "count": 0
+        },
+        {
+            "skill_name": "People Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Cybersecurity",
+            "count": 1
+        },
+        {
+            "skill_name": "Profinet",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM Rational Rhapsody",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "Internet of Things (IoT)",
+            "count": 3
+        },
+        {
+            "skill_name": "Real-Time Operating Systems (RTOS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Data Analytics",
+            "count": 6
+        },
+        {
+            "skill_name": "Public Speaking",
+            "count": 0
+        },
+        {
+            "skill_name": "Search Engines",
+            "count": 0
+        },
+        {
+            "skill_name": "NoSQL",
+            "count": 19
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Elasticsearch",
+            "count": 4
+        },
+        {
+            "skill_name": "DWDM",
+            "count": 0
+        },
+        {
+            "skill_name": "Fiber to the x (FTTx)",
+            "count": 0
+        },
+        {
+            "skill_name": "Microwave",
+            "count": 0
+        },
+        {
+            "skill_name": "NI Multisim",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Automation",
+            "count": 0
+        },
+        {
+            "skill_name": "Agilent ADS",
+            "count": 0
+        },
+        {
+            "skill_name": "Automotive Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Instrumentation",
+            "count": 0
+        },
+        {
+            "skill_name": "System Identification",
+            "count": 0
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "dSPACE",
+            "count": 0
+        },
+        {
+            "skill_name": "CANoe",
+            "count": 0
+        },
+        {
+            "skill_name": "Plant Identification",
+            "count": 0
+        },
+        {
+            "skill_name": "Printed Circuit Board (PCB) Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Microwave Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Antennas",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronic Warfare",
+            "count": 0
+        },
+        {
+            "skill_name": "Teamwork",
+            "count": 10
+        },
+        {
+            "skill_name": "Marketing Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Verilog",
+            "count": 0
+        },
+        {
+            "skill_name": "LabVIEW",
+            "count": 0
+        },
+        {
+            "skill_name": "Troubleshooting",
+            "count": 1
+        },
+        {
+            "skill_name": "Power Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "ModelSim",
+            "count": 0
+        },
+        {
+            "skill_name": "Laboratory Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "3G",
+            "count": 0
+        },
+        {
+            "skill_name": "2G",
+            "count": 0
+        },
+        {
+            "skill_name": "LTE",
+            "count": 0
+        },
+        {
+            "skill_name": "Universal Mobile Telecommunications System (UMTS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Support System (BSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "General Packet Radio Service (GPRS)",
+            "count": 0
+        },
+        {
+            "skill_name": "NSN",
+            "count": 0
+        },
+        {
+            "skill_name": "Wideband Code Division Multiple Access (WCDMA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Radio Frequency (RF) Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "RAN",
+            "count": 0
+        },
+        {
+            "skill_name": "HSPA",
+            "count": 0
+        },
+        {
+            "skill_name": "TEMS",
+            "count": 0
+        },
+        {
+            "skill_name": "Actix",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "Signaling System 7 (SS7)",
+            "count": 0
+        },
+        {
+            "skill_name": "Next-Generation Network (NGN)",
+            "count": 0
+        },
+        {
+            "skill_name": "Public Switched Telephone Network (PSTN)",
+            "count": 0
+        },
+        {
+            "skill_name": "GSM-R",
+            "count": 0
+        },
+        {
+            "skill_name": "V5.2",
+            "count": 0
+        },
+        {
+            "skill_name": "Solution Selling",
+            "count": 0
+        },
+        {
+            "skill_name": "Value-Added Services (VAS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Railway Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "IP Multimedia Subsystem",
+            "count": 0
+        },
+        {
+            "skill_name": "MSAN",
+            "count": 0
+        },
+        {
+            "skill_name": "DSL",
+            "count": 0
+        },
+        {
+            "skill_name": "IPTV",
+            "count": 0
+        },
+        {
+            "skill_name": "WiFi",
+            "count": 0
+        },
+        {
+            "skill_name": "Solution Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol Suite (TCP/IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "Capability Maturity Model Integration (CMMI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Communications",
+            "count": 0
+        },
+        {
+            "skill_name": "Contract Negotiation",
+            "count": 0
+        },
+        {
+            "skill_name": "Pre-sales",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "Consultative Selling",
+            "count": 0
+        },
+        {
+            "skill_name": "VDSL2",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Testing Life Cycle (STLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Servlets",
+            "count": 0
+        },
+        {
+            "skill_name": "Tomcat",
+            "count": 1
+        },
+        {
+            "skill_name": "Proteus",
+            "count": 0
+        },
+        {
+            "skill_name": "Java Database Connectivity (JDBC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Delphi",
+            "count": 0
+        },
+        {
+            "skill_name": "Core Java",
+            "count": 1
+        },
+        {
+            "skill_name": "NetBeans",
+            "count": 0
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Jakarta EE",
+            "count": 0
+        },
+        {
+            "skill_name": "Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Solar Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "Red Hat Linux",
+            "count": 0
+        },
+        {
+            "skill_name": "Server Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Technical Documentation",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Facing Roles",
+            "count": 0
+        },
+        {
+            "skill_name": "Integration",
+            "count": 14
+        },
+        {
+            "skill_name": "Software Quality Assurance",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Access Control",
+            "count": 0
+        },
+        {
+            "skill_name": "Subversion",
+            "count": 0
+        },
+        {
+            "skill_name": "System Administration",
+            "count": 1
+        },
+        {
+            "skill_name": "Software Configuration Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Lifecycle Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Visio",
+            "count": 12
+        },
+        {
+            "skill_name": "Quality Control",
+            "count": 0
+        },
+        {
+            "skill_name": "ATM Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Support",
+            "count": 0
+        },
+        {
+            "skill_name": "Policy Based Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Delivery",
+            "count": 0
+        },
+        {
+            "skill_name": "User Experience (UX)",
+            "count": 0
+        },
+        {
+            "skill_name": "Communication",
+            "count": 16
+        },
+        {
+            "skill_name": "User Interface Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Cucumber",
+            "count": 2
+        },
+        {
+            "skill_name": "Assembly Language",
+            "count": 0
+        },
+        {
+            "skill_name": "Functional Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Object-oriented Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Automation Framework",
+            "count": 0
+        },
+        {
+            "skill_name": "Manual Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "UAV",
+            "count": 0
+        },
+        {
+            "skill_name": "Apache",
+            "count": 4
+        },
+        {
+            "skill_name": "Web Services API",
+            "count": 0
+        },
+        {
+            "skill_name": "Flask",
+            "count": 5
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "PDCP",
+            "count": 0
+        },
+        {
+            "skill_name": "Market Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design Patterns",
+            "count": 0
+        },
+        {
+            "skill_name": "Corporate Social Responsibility",
+            "count": 0
+        },
+        {
+            "skill_name": "New Business Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Atoll",
+            "count": 0
+        },
+        {
+            "skill_name": "Optimization",
+            "count": 3
+        },
+        {
+            "skill_name": "Renewable Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "Chinese Culture",
+            "count": 0
+        },
+        {
+            "skill_name": "Fiddler",
+            "count": 0
+        },
+        {
+            "skill_name": "Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Chinese",
+            "count": 0
+        },
+        {
+            "skill_name": "REST APIs",
+            "count": 2
+        },
+        {
+            "skill_name": "Postman API",
+            "count": 0
+        },
+        {
+            "skill_name": "Wireshark",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Driven Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Speech Processing",
+            "count": 0
+        },
+        {
+            "skill_name": "Artificial Neural Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Self-management",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Statement Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Engineers",
+            "count": 4
+        },
+        {
+            "skill_name": "Consulting",
+            "count": 4
+        },
+        {
+            "skill_name": "Business Management",
+            "count": 0
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "American Welding Society Standards",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing Management",
+            "count": 0
+        },
+        {
+            "skill_name": "MongoDB",
+            "count": 11
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Redis",
+            "count": 29
+        },
+        {
+            "skill_name": "Retail Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Loans",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Governance",
+            "count": 0
+        },
+        {
+            "skill_name": "Time Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Enterprise Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Science",
+            "count": 6
+        },
+        {
+            "skill_name": "Quantitative Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Finance",
+            "count": 2
+        },
+        {
+            "skill_name": "Code Composer Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "Atlassian Bamboo",
+            "count": 0
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "Splunk",
+            "count": 1
+        },
+        {
+            "skill_name": "Risk Assessment",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Management",
+            "count": 4
+        },
+        {
+            "skill_name": "Security",
+            "count": 26
+        },
+        {
+            "skill_name": "Cyberark",
+            "count": 0
+        },
+        {
+            "skill_name": "General Data Protection Regulation (GDPR)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Privacy",
+            "count": 1
+        },
+        {
+            "skill_name": "Information Security",
+            "count": 7
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Requirements Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "PL/SQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Competitive Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Checkpoint Security",
+            "count": 0
+        },
+        {
+            "skill_name": "Cisco Systems Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Cisco Routers",
+            "count": 0
+        },
+        {
+            "skill_name": "Firewalls",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronic Engineering",
+            "count": 5
+        },
+        {
+            "skill_name": "Network Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Security",
+            "count": 0
+        },
+        {
+            "skill_name": "Virtual Private Network (VPN)",
+            "count": 0
+        },
+        {
+            "skill_name": "Modeling",
+            "count": 1
+        },
+        {
+            "skill_name": "Extract, Transform, Load (ETL)",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Database Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Migration",
+            "count": 0
+        },
+        {
+            "skill_name": "SAS",
+            "count": 18
+        },
+        {
+            "skill_name": "GoldenGate",
+            "count": 0
+        },
+        {
+            "skill_name": "Virtual Machines",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Operations Center",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM QRadar",
+            "count": 0
+        },
+        {
+            "skill_name": "Cyber Defense",
+            "count": 1
+        },
+        {
+            "skill_name": "Virtual Server",
+            "count": 0
+        },
+        {
+            "skill_name": "Cyber Threat Intelligence (CTI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Information and Event Management (SIEM)",
+            "count": 0
+        },
+        {
+            "skill_name": "User Acceptance Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Log Management",
+            "count": 0
+        },
+        {
+            "skill_name": "ArcSight",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "System Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Optimization",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "ADO.NET",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Presentation Foundation (WPF)",
+            "count": 0
+        },
+        {
+            "skill_name": "Adobe Fireworks",
+            "count": 0
+        },
+        {
+            "skill_name": "Silverlight",
+            "count": 0
+        },
+        {
+            "skill_name": "Language Integrated Query (LINQ)",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle SQL Developer",
+            "count": 0
+        },
+        {
+            "skill_name": "ASP.NET",
+            "count": 5
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "NHibernate",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Visual Studio C++",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile & Waterfall Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Aviation",
+            "count": 1
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "OrCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP ERP",
+            "count": 0
+        },
+        {
+            "skill_name": "ABAP",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP Implementation",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP Solutions",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP BusinessObjects",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP Business Warehouse (SAP BW)",
+            "count": 0
+        },
+        {
+            "skill_name": "BO Web Intelligence",
+            "count": 0
+        },
+        {
+            "skill_name": "BizTalk",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP FI",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP Sales & Distribution",
+            "count": 0
+        },
+        {
+            "skill_name": "Regression Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "HP QuickTest Professional (QTP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Performance Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Session Initiation Protocol (SIP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Management",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Quality Center",
+            "count": 0
+        },
+        {
+            "skill_name": "IMS DB/DC",
+            "count": 0
+        },
+        {
+            "skill_name": "SoapUI",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Cases",
+            "count": 1
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Personal Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Interpersonal Communication",
+            "count": 0
+        },
+        {
+            "skill_name": "Dialux",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Development",
+            "count": 1
+        },
+        {
+            "skill_name": "Business Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "International Relations",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Vendor Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Academic English",
+            "count": 0
+        },
+        {
+            "skill_name": "COBIT",
+            "count": 1
+        },
+        {
+            "skill_name": "Game Design",
+            "count": 1
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "Virtual Routing and Forwarding (VRF)",
+            "count": 0
+        },
+        {
+            "skill_name": "HVAC",
+            "count": 0
+        },
+        {
+            "skill_name": "Air Conditioning",
+            "count": 0
+        },
+        {
+            "skill_name": "Competition Law",
+            "count": 0
+        },
+        {
+            "skill_name": "Distributorships",
+            "count": 0
+        },
+        {
+            "skill_name": "Ventilation",
+            "count": 0
+        },
+        {
+            "skill_name": "Six Sigma",
+            "count": 0
+        }
+    ],
+    "Electrical, Electronics and Communications": [
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "Haptics",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Science",
+            "count": 209
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "OpenGL",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Integration",
+            "count": 14
+        },
+        {
+            "skill_name": "Software Development",
+            "count": 7
+        },
+        {
+            "skill_name": "Wireless Technologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "Sensors",
+            "count": 0
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Firmware",
+            "count": 0
+        },
+        {
+            "skill_name": "Embedded Software",
+            "count": 1
+        },
+        {
+            "skill_name": "Internet Protocol Suite (TCP/IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "Signal Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Mobile Devices",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Statistical Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Pattern Recognition",
+            "count": 0
+        },
+        {
+            "skill_name": "Distributed Systems",
+            "count": 1
+        },
+        {
+            "skill_name": "MapReduce",
+            "count": 0
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Cloud Computing",
+            "count": 5
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Service",
+            "count": 0
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Intellectual",
+            "count": 0
+        },
+        {
+            "skill_name": "Licensure",
+            "count": 0
+        },
+        {
+            "skill_name": "Communication",
+            "count": 16
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Creative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Partnerships",
+            "count": 0
+        },
+        {
+            "skill_name": "LTSpice",
+            "count": 0
+        },
+        {
+            "skill_name": "Leadership",
+            "count": 3
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Sales",
+            "count": 5
+        },
+        {
+            "skill_name": "Network Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "HP-UX",
+            "count": 0
+        },
+        {
+            "skill_name": "Multiprotocol Label Switching (MPLS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Simulations",
+            "count": 0
+        },
+        {
+            "skill_name": "VHDL",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "E-commerce",
+            "count": 3
+        },
+        {
+            "skill_name": "Personal Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Innovation Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Customs Regulations",
+            "count": 0
+        },
+        {
+            "skill_name": "Entrepreneurship",
+            "count": 0
+        },
+        {
+            "skill_name": "International Trade",
+            "count": 0
+        },
+        {
+            "skill_name": "Transmission Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Vendor Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales & Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Import/Export Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "Technical Presentations",
+            "count": 0
+        },
+        {
+            "skill_name": "Freight Forwarding",
+            "count": 0
+        },
+        {
+            "skill_name": "Border Gateway Protocol (BGP)",
+            "count": 0
+        },
+        {
+            "skill_name": "DSL",
+            "count": 0
+        },
+        {
+            "skill_name": "Core Network",
+            "count": 0
+        },
+        {
+            "skill_name": "IPTV",
+            "count": 0
+        },
+        {
+            "skill_name": "Unix Shell Scripting",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle Database",
+            "count": 1
+        },
+        {
+            "skill_name": "Time Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Statistical Data Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Search Engine Optimization (SEO)",
+            "count": 0
+        },
+        {
+            "skill_name": "SPICE",
+            "count": 0
+        },
+        {
+            "skill_name": "People Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Cybersecurity",
+            "count": 1
+        },
+        {
+            "skill_name": "Profinet",
+            "count": 0
+        },
+        {
+            "skill_name": "Microcontrollers",
+            "count": 0
+        },
+        {
+            "skill_name": "IBM Rational Rhapsody",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "Internet of Things (IoT)",
+            "count": 3
+        },
+        {
+            "skill_name": "System Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Real-Time Operating Systems (RTOS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": "Data Analytics",
+            "count": 6
+        },
+        {
+            "skill_name": "Open Source Software",
+            "count": 0
+        },
+        {
+            "skill_name": "Hibernate",
+            "count": 8
+        },
+        {
+            "skill_name": "Interfaces",
+            "count": 0
+        },
+        {
+            "skill_name": "Visual Studio",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Analytics",
+            "count": 15
+        },
+        {
+            "skill_name": "Design Patterns",
+            "count": 13
+        },
+        {
+            "skill_name": "Big Data",
+            "count": 5
+        },
+        {
+            "skill_name": "PostgreSQL",
+            "count": 18
+        },
+        {
+            "skill_name": "GSM",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "ITIL",
+            "count": 4
+        },
+        {
+            "skill_name": "NI Multisim",
+            "count": 0
+        },
+        {
+            "skill_name": "IP Phones",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Automation",
+            "count": 0
+        },
+        {
+            "skill_name": "Cucumber",
+            "count": 2
+        },
+        {
+            "skill_name": "UPS Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "IP Cameras",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Assembly Language",
+            "count": 0
+        },
+        {
+            "skill_name": "Functional Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "KPI Reports",
+            "count": 0
+        },
+        {
+            "skill_name": "2G",
+            "count": 0
+        },
+        {
+            "skill_name": "LTE",
+            "count": 0
+        },
+        {
+            "skill_name": "RAN",
+            "count": 0
+        },
+        {
+            "skill_name": "Huawei M2000",
+            "count": 0
+        },
+        {
+            "skill_name": "Wideband Code Division Multiple Access (WCDMA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Optimization",
+            "count": 0
+        },
+        {
+            "skill_name": "Malware Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Radio Network Optimization",
+            "count": 0
+        },
+        {
+            "skill_name": "Ericsson OSS",
+            "count": 0
+        },
+        {
+            "skill_name": "Moshell",
+            "count": 0
+        },
+        {
+            "skill_name": "3GPP",
+            "count": 0
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Stochastic Processes",
+            "count": 0
+        },
+        {
+            "skill_name": "Partial Differential Equations",
+            "count": 0
+        },
+        {
+            "skill_name": "Complex Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Field-Programmable Gate Arrays (FPGA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Quantum Mechanics",
+            "count": 0
+        },
+        {
+            "skill_name": "Robot Operating System (ROS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Presentation Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Transformation",
+            "count": 3
+        },
+        {
+            "skill_name": "Verilog",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "LabVIEW",
+            "count": 0
+        },
+        {
+            "skill_name": "3G",
+            "count": 0
+        },
+        {
+            "skill_name": "Universal Mobile Telecommunications System (UMTS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Support System (BSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Supply Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Troubleshooting",
+            "count": 1
+        },
+        {
+            "skill_name": "Supply Chain Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Juniper Networks Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Adobe Photoshop",
+            "count": 0
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Utility Billing",
+            "count": 0
+        },
+        {
+            "skill_name": "ClearCase",
+            "count": 0
+        },
+        {
+            "skill_name": "Solution Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "DWDM",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy Industry",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Development",
+            "count": 1
+        },
+        {
+            "skill_name": "Power Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft SQL Server",
+            "count": 2
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Synchronous Digital Hierarchy (SDH)",
+            "count": 0
+        },
+        {
+            "skill_name": "Adobe Design Programs",
+            "count": 0
+        },
+        {
+            "skill_name": "PSIM",
+            "count": 0
+        },
+        {
+            "skill_name": "CorelDRAW",
+            "count": 0
+        },
+        {
+            "skill_name": "Power Electronics",
+            "count": 0
+        },
+        {
+            "skill_name": "Transmission",
+            "count": 0
+        },
+        {
+            "skill_name": "Logistics Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "MongoDB",
+            "count": 11
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Jenkins",
+            "count": 8
+        },
+        {
+            "skill_name": "Continuous Integration",
+            "count": 8
+        },
+        {
+            "skill_name": "Jira",
+            "count": 19
+        },
+        {
+            "skill_name": "Image Segmentation",
+            "count": 0
+        },
+        {
+            "skill_name": "Radio Frequency (RF)",
+            "count": 0
+        },
+        {
+            "skill_name": "Optimization",
+            "count": 3
+        },
+        {
+            "skill_name": "Fiber Optics",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Communications",
+            "count": 0
+        },
+        {
+            "skill_name": "Signaling System 7 (SS7)",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Negotiations",
+            "count": 0
+        },
+        {
+            "skill_name": "Aruba Wireless",
+            "count": 0
+        },
+        {
+            "skill_name": "Wireless Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Cross-cultural Teams",
+            "count": 0
+        },
+        {
+            "skill_name": "Access Points",
+            "count": 0
+        },
+        {
+            "skill_name": "Microwave",
+            "count": 0
+        },
+        {
+            "skill_name": "WiMAX",
+            "count": 0
+        },
+        {
+            "skill_name": "OrCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Electrical Engineering",
+            "count": 6
+        },
+        {
+            "skill_name": "Computer-Aided Design (CAD)",
+            "count": 0
+        },
+        {
+            "skill_name": "Debugging",
+            "count": 2
+        },
+        {
+            "skill_name": "Cross-functional Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Field Service",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Delivery",
+            "count": 0
+        },
+        {
+            "skill_name": "Maintenance Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Field Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "Edge",
+            "count": 4
+        },
+        {
+            "skill_name": "Rollout",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Architecture",
+            "count": 0
+        },
+        {
+            "skill_name": "Proteus",
+            "count": 0
+        },
+        {
+            "skill_name": "SOLIDWORKS",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Literacy",
+            "count": 0
+        },
+        {
+            "skill_name": "Acceptance Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Quality Assurance",
+            "count": 0
+        },
+        {
+            "skill_name": "4G",
+            "count": 0
+        },
+        {
+            "skill_name": "Global Mapper",
+            "count": 0
+        },
+        {
+            "skill_name": "GPS Navigation",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "jQuery",
+            "count": 0
+        },
+        {
+            "skill_name": "GRC",
+            "count": 1
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronics",
+            "count": 4
+        },
+        {
+            "skill_name": "Manual Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Automation",
+            "count": 2
+        },
+        {
+            "skill_name": "Public Speaking",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "PLC Programming",
+            "count": 0
+        },
+        {
+            "skill_name": "Foreign Affairs",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "UIKit",
+            "count": 1
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "RESTful WebServices",
+            "count": 0
+        },
+        {
+            "skill_name": "iOS Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Objective-C",
+            "count": 3
+        },
+        {
+            "skill_name": "MySQL",
+            "count": 10
+        },
+        {
+            "skill_name": "Mobile Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Back-End Web Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Oracle SQL Developer",
+            "count": 0
+        },
+        {
+            "skill_name": "Mobile Application Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Swift (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Teamwork",
+            "count": 10
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "Autodesk 3ds Max",
+            "count": 0
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "General Packet Radio Service (GPRS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Systems Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP BusinessObjects",
+            "count": 0
+        },
+        {
+            "skill_name": "Financials",
+            "count": 0
+        },
+        {
+            "skill_name": "Unit Testing",
+            "count": 6
+        },
+        {
+            "skill_name": "SAS",
+            "count": 18
+        },
+        {
+            "skill_name": "Xilinx ISE",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Server",
+            "count": 6
+        },
+        {
+            "skill_name": "Linux System Administration",
+            "count": 1
+        },
+        {
+            "skill_name": "Portfolio Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Marketing Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Retail Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "COBIT",
+            "count": 1
+        },
+        {
+            "skill_name": "Business Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategy",
+            "count": 1
+        },
+        {
+            "skill_name": "Impression",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "E-invoicing",
+            "count": 0
+        },
+        {
+            "skill_name": "SharePoint Server",
+            "count": 0
+        },
+        {
+            "skill_name": "Virtual Machines",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Cluster",
+            "count": 0
+        },
+        {
+            "skill_name": "System Center",
+            "count": 0
+        },
+        {
+            "skill_name": "WhatsUp",
+            "count": 0
+        },
+        {
+            "skill_name": "Domain Controller",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Operations Manager",
+            "count": 0
+        },
+        {
+            "skill_name": "SharePoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Domain",
+            "count": 0
+        },
+        {
+            "skill_name": "Photography",
+            "count": 0
+        },
+        {
+            "skill_name": "System Administration",
+            "count": 1
+        },
+        {
+            "skill_name": "Microsoft Products",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Credit",
+            "count": 0
+        },
+        {
+            "skill_name": "Requirements Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Aviation",
+            "count": 1
+        },
+        {
+            "skill_name": "Mobile Security",
+            "count": 4
+        },
+        {
+            "skill_name": "Mobile Device Management",
+            "count": 0
+        },
+        {
+            "skill_name": "VBScript",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Metrics",
+            "count": 0
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Security Operations Center",
+            "count": 0
+        },
+        {
+            "skill_name": "Threat & Vulnerability Management",
+            "count": 0
+        },
+        {
+            "skill_name": "System Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Testing Life Cycle (STLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "Regression Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Visio",
+            "count": 12
+        },
+        {
+            "skill_name": "SOAP",
+            "count": 7
+        },
+        {
+            "skill_name": "Community Organizing",
+            "count": 0
+        },
+        {
+            "skill_name": "Volunteer Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Emotional Intelligence",
+            "count": 0
+        },
+        {
+            "skill_name": "Azure DevOps Server",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Responsibility",
+            "count": 0
+        },
+        {
+            "skill_name": "New Business Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Performance Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Management Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "HP Network Node Manager",
+            "count": 0
+        },
+        {
+            "skill_name": "Virtualization",
+            "count": 4
+        },
+        {
+            "skill_name": "DevOps",
+            "count": 8
+        },
+        {
+            "skill_name": "User Acceptance Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "NumPy",
+            "count": 5
+        },
+        {
+            "skill_name": "Sales Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Pre-press",
+            "count": 0
+        },
+        {
+            "skill_name": "Direct Mail",
+            "count": 0
+        },
+        {
+            "skill_name": "Graphic Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "Negotiation",
+            "count": 0
+        }
+    ],
+    "Mechanical Engineering": [
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Teamwork",
+            "count": 10
+        },
+        {
+            "skill_name": "Leadership",
+            "count": 3
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "Business Development",
+            "count": 1
+        },
+        {
+            "skill_name": "Sales",
+            "count": 5
+        },
+        {
+            "skill_name": "Business Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Market Research",
+            "count": 0
+        },
+        {
+            "skill_name": "Automation",
+            "count": 2
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategy",
+            "count": 1
+        },
+        {
+            "skill_name": "Direct Sales",
+            "count": 0
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "CMake",
+            "count": 0
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "OpenGL",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Structures",
+            "count": 2
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Databases",
+            "count": 15
+        },
+        {
+            "skill_name": "Scikit-Learn",
+            "count": 0
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Italian",
+            "count": 1
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "SOLIDWORKS",
+            "count": 0
+        },
+        {
+            "skill_name": "Pricing Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "U.S. Generally Accepted Accounting Principles (GAAP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Reporting",
+            "count": 0
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Adobe Photoshop",
+            "count": 0
+        },
+        {
+            "skill_name": "Snowboarding",
+            "count": 0
+        },
+        {
+            "skill_name": "Pharmaceutics",
+            "count": 0
+        },
+        {
+            "skill_name": "Tableau",
+            "count": 8
+        },
+        {
+            "skill_name": "Process Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "Continuous Improvement",
+            "count": 2
+        },
+        {
+            "skill_name": "Automotive",
+            "count": 0
+        },
+        {
+            "skill_name": "Negotiation",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategic Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Forecasting",
+            "count": 0
+        },
+        {
+            "skill_name": "Lean Manufacturing",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Supply Chain Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Six Sigma",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Operations Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Manufacturing",
+            "count": 1
+        },
+        {
+            "skill_name": "Account Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Mechanical Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Simulations",
+            "count": 0
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Failure Mode and Effects Analysis (FMEA)",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Design of Experiments (DOE)",
+            "count": 0
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Communication",
+            "count": 16
+        },
+        {
+            "skill_name": "Collaborative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Advanced Product Quality Planning (APQP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Production Part Approval Process (PPAP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Time Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Aviation",
+            "count": 1
+        },
+        {
+            "skill_name": "Computer-Aided Design (CAD)",
+            "count": 0
+        },
+        {
+            "skill_name": "U.S. Department of Defense",
+            "count": 0
+        },
+        {
+            "skill_name": "Piloting",
+            "count": 0
+        },
+        {
+            "skill_name": "Hydraulics",
+            "count": 0
+        },
+        {
+            "skill_name": "Military Aviation",
+            "count": 0
+        },
+        {
+            "skill_name": "Motors",
+            "count": 0
+        },
+        {
+            "skill_name": "Design",
+            "count": 70
+        },
+        {
+            "skill_name": "ANSYS",
+            "count": 0
+        },
+        {
+            "skill_name": "Military",
+            "count": 5
+        },
+        {
+            "skill_name": "Photography",
+            "count": 0
+        },
+        {
+            "skill_name": "Presentation Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Sketching",
+            "count": 0
+        },
+        {
+            "skill_name": "Music Industry",
+            "count": 0
+        },
+        {
+            "skill_name": "PTC Creo",
+            "count": 0
+        },
+        {
+            "skill_name": "Music Production",
+            "count": 0
+        },
+        {
+            "skill_name": "Sound Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Industrial Design",
+            "count": 1
+        },
+        {
+            "skill_name": "International Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronic Resources",
+            "count": 0
+        },
+        {
+            "skill_name": "Graphic Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Turkish",
+            "count": 15
+        },
+        {
+            "skill_name": "3D Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "German",
+            "count": 9
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "SAP ERP",
+            "count": 0
+        },
+        {
+            "skill_name": "Production Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Typing",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "Decision-Making",
+            "count": 0
+        },
+        {
+            "skill_name": "CATIA",
+            "count": 0
+        },
+        {
+            "skill_name": "Pipelines",
+            "count": 1
+        },
+        {
+            "skill_name": "Oil & Gas",
+            "count": 1
+        },
+        {
+            "skill_name": "Petroleum",
+            "count": 0
+        },
+        {
+            "skill_name": "Industrial Engineering",
+            "count": 8
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "Gas",
+            "count": 1
+        },
+        {
+            "skill_name": "Project Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Routing",
+            "count": 0
+        },
+        {
+            "skill_name": "Networking",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Computer Repair",
+            "count": 0
+        },
+        {
+            "skill_name": "Coaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Trails",
+            "count": 0
+        },
+        {
+            "skill_name": "Entrepreneurship",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Crystal Ball",
+            "count": 0
+        },
+        {
+            "skill_name": "Control Charts",
+            "count": 0
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Business Process Improvement",
+            "count": 0
+        },
+        {
+            "skill_name": "CMMI Level 5",
+            "count": 0
+        },
+        {
+            "skill_name": "Statistical Process Control (SPC)",
+            "count": 0
+        },
+        {
+            "skill_name": "ISO 14001",
+            "count": 0
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Sales Operations",
+            "count": 0
+        },
+        {
+            "skill_name": "HVAC",
+            "count": 0
+        },
+        {
+            "skill_name": "Consulting",
+            "count": 4
+        },
+        {
+            "skill_name": "Hybrid Electric Vehicles",
+            "count": 0
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "NumPy",
+            "count": 5
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "Star-CCM+",
+            "count": 0
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Computational Fluid Dynamics (CFD)",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer-Aided Engineering (CAE)",
+            "count": 0
+        },
+        {
+            "skill_name": "Continuous Integration",
+            "count": 8
+        },
+        {
+            "skill_name": "Simulink",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "Neural Networks",
+            "count": 0
+        },
+        {
+            "skill_name": "Event Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Mac",
+            "count": 36
+        },
+        {
+            "skill_name": "Kaizen",
+            "count": 0
+        },
+        {
+            "skill_name": "5S",
+            "count": 0
+        },
+        {
+            "skill_name": "Front-end Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Power Plants",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Renewable Energy Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Social Media Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "PHP",
+            "count": 5
+        },
+        {
+            "skill_name": "International Business Development",
+            "count": 0
+        },
+        {
+            "skill_name": "Optimization",
+            "count": 3
+        },
+        {
+            "skill_name": "Motorcycle",
+            "count": 0
+        },
+        {
+            "skill_name": "Troubleshooting",
+            "count": 1
+        },
+        {
+            "skill_name": "Materials Science",
+            "count": 0
+        },
+        {
+            "skill_name": "Electrical Engineering",
+            "count": 6
+        },
+        {
+            "skill_name": "Electronics",
+            "count": 4
+        },
+        {
+            "skill_name": "Testing",
+            "count": 15
+        },
+        {
+            "skill_name": "GSM",
+            "count": 0
+        },
+        {
+            "skill_name": "3G",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "2G",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Rollouts",
+            "count": 0
+        },
+        {
+            "skill_name": "Rollout",
+            "count": 0
+        },
+        {
+            "skill_name": "WordPress",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Mining",
+            "count": 0
+        },
+        {
+            "skill_name": "Web Design",
+            "count": 1
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "MSC Adams",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Collection",
+            "count": 0
+        },
+        {
+            "skill_name": "Automated Software Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Budget Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Budgeting",
+            "count": 0
+        },
+        {
+            "skill_name": "Public Speaking",
+            "count": 0
+        },
+        {
+            "skill_name": "Payment Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "E-commerce",
+            "count": 3
+        },
+        {
+            "skill_name": "Marketing Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "Eclipse",
+            "count": 0
+        },
+        {
+            "skill_name": "Retail Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Branded Entertainment",
+            "count": 0
+        },
+        {
+            "skill_name": "Customer Experience",
+            "count": 1
+        },
+        {
+            "skill_name": "Mobile Technology",
+            "count": 0
+        },
+        {
+            "skill_name": "Renewable Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "Investments",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Modeling",
+            "count": 0
+        },
+        {
+            "skill_name": "Structured Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Finance",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Loans",
+            "count": 0
+        },
+        {
+            "skill_name": "Infrastructure",
+            "count": 4
+        },
+        {
+            "skill_name": "Business Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Management",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Competitive Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytics",
+            "count": 15
+        },
+        {
+            "skill_name": "Contract Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Plumbing",
+            "count": 0
+        },
+        {
+            "skill_name": "Elevators",
+            "count": 0
+        },
+        {
+            "skill_name": "Bill of Materials",
+            "count": 0
+        },
+        {
+            "skill_name": "Heating",
+            "count": 0
+        },
+        {
+            "skill_name": "Purchasing",
+            "count": 0
+        },
+        {
+            "skill_name": "Teaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows",
+            "count": 12
+        },
+        {
+            "skill_name": "Financial Risk",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Risk",
+            "count": 0
+        },
+        {
+            "skill_name": "Risk Monitoring",
+            "count": 0
+        },
+        {
+            "skill_name": "Commercial Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Functional Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Process Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Regression Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Metals",
+            "count": 0
+        },
+        {
+            "skill_name": "Aluminum",
+            "count": 0
+        },
+        {
+            "skill_name": "Aluminum Alloys",
+            "count": 0
+        },
+        {
+            "skill_name": "Sales & Marketing",
+            "count": 0
+        },
+        {
+            "skill_name": "Metallurgy",
+            "count": 0
+        },
+        {
+            "skill_name": "Siemens NX",
+            "count": 0
+        },
+        {
+            "skill_name": "Mechanical Properties",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Building",
+            "count": 0
+        },
+        {
+            "skill_name": "Heat Pumps",
+            "count": 0
+        },
+        {
+            "skill_name": "Solar Energy",
+            "count": 0
+        },
+        {
+            "skill_name": "HVAC Controls",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Sales",
+            "count": 0
+        },
+        {
+            "skill_name": "Key Account Relationships",
+            "count": 0
+        },
+        {
+            "skill_name": "Key Account Relationship Building",
+            "count": 0
+        },
+        {
+            "skill_name": "Air Conditioning",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Case Preparation",
+            "count": 0
+        },
+        {
+            "skill_name": "Virtual Routing and Forwarding (VRF)",
+            "count": 0
+        },
+        {
+            "skill_name": "AHU",
+            "count": 0
+        },
+        {
+            "skill_name": "Manufacturing Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Budget Process",
+            "count": 0
+        },
+        {
+            "skill_name": "Technology Change Management",
+            "count": 0
+        },
+        {
+            "skill_name": "ARIS",
+            "count": 0
+        },
+        {
+            "skill_name": "Body Language",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy Efficiency",
+            "count": 0
+        },
+        {
+            "skill_name": "Energy Conservation",
+            "count": 0
+        },
+        {
+            "skill_name": "Visual Communication",
+            "count": 0
+        }
+    ],
+    "Mechatronics, Robotics, and Automation Engineering": [
+        {
+            "skill_name": "Java",
+            "count": 111
+        },
+        {
+            "skill_name": "OpenCV",
+            "count": 4
+        },
+        {
+            "skill_name": "Automation",
+            "count": 2
+        },
+        {
+            "skill_name": "AutoCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Python (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Reinforcement Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Programmable Logic Controller (PLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "SOLIDWORKS",
+            "count": 0
+        },
+        {
+            "skill_name": "Process Control",
+            "count": 0
+        },
+        {
+            "skill_name": "C++",
+            "count": 18
+        },
+        {
+            "skill_name": "Robotics",
+            "count": 0
+        },
+        {
+            "skill_name": "Cybersecurity",
+            "count": 1
+        },
+        {
+            "skill_name": "Microcontrollers",
+            "count": 0
+        },
+        {
+            "skill_name": "Artificial Intelligence (AI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Analysis",
+            "count": 1
+        },
+        {
+            "skill_name": "MATLAB",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Management",
+            "count": 7
+        },
+        {
+            "skill_name": "Six Sigma",
+            "count": 0
+        },
+        {
+            "skill_name": "Automotive Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Continuous Improvement",
+            "count": 2
+        },
+        {
+            "skill_name": "Management",
+            "count": 39
+        },
+        {
+            "skill_name": "Program Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Linux",
+            "count": 22
+        },
+        {
+            "skill_name": "Databases",
+            "count": 15
+        },
+        {
+            "skill_name": "Product Management",
+            "count": 1
+        },
+        {
+            "skill_name": "Supply Chain Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Operations Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Manufacturing",
+            "count": 1
+        },
+        {
+            "skill_name": "Engineering Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Strategy",
+            "count": 1
+        },
+        {
+            "skill_name": "Computer-Aided Design (CAD)",
+            "count": 0
+        },
+        {
+            "skill_name": "Facilitation",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Development",
+            "count": 5
+        },
+        {
+            "skill_name": "Project Reviews",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Mechanical Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Decision-Making",
+            "count": 0
+        },
+        {
+            "skill_name": "Failure Mode and Effects Analysis (FMEA)",
+            "count": 0
+        },
+        {
+            "skill_name": "CATIA",
+            "count": 0
+        },
+        {
+            "skill_name": "Embedded Software",
+            "count": 1
+        },
+        {
+            "skill_name": "Android Development",
+            "count": 2
+        },
+        {
+            "skill_name": "Mobile Applications",
+            "count": 0
+        },
+        {
+            "skill_name": "Computer Vision",
+            "count": 12
+        },
+        {
+            "skill_name": "C (Programming Language)",
+            "count": 0
+        },
+        {
+            "skill_name": "Data Science",
+            "count": 6
+        },
+        {
+            "skill_name": "Deep Learning",
+            "count": 0
+        },
+        {
+            "skill_name": "Electronics",
+            "count": 4
+        },
+        {
+            "skill_name": "Amazon Web Services (AWS)",
+            "count": 1
+        },
+        {
+            "skill_name": "Node.js",
+            "count": 8
+        },
+        {
+            "skill_name": "Algorithms",
+            "count": 3
+        },
+        {
+            "skill_name": "Team Building",
+            "count": 0
+        },
+        {
+            "skill_name": "Arduino",
+            "count": 0
+        },
+        {
+            "skill_name": "Coaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Cucumber",
+            "count": 2
+        },
+        {
+            "skill_name": "Market Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Engineering",
+            "count": 137
+        },
+        {
+            "skill_name": "Control Systems Design",
+            "count": 0
+        },
+        {
+            "skill_name": "Electrical Engineering",
+            "count": 6
+        },
+        {
+            "skill_name": "Windows XP",
+            "count": 0
+        },
+        {
+            "skill_name": "Domain Name System (DNS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Deployment Services (WDS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Network Administration",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Server",
+            "count": 6
+        },
+        {
+            "skill_name": "Internet Protocol (IP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Sysprep",
+            "count": 0
+        },
+        {
+            "skill_name": "Dynamic Host Configuration Protocol (DHCP)",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Operations",
+            "count": 1
+        },
+        {
+            "skill_name": "WinPE",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Information Services (IIS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Domain Controller",
+            "count": 0
+        },
+        {
+            "skill_name": "WAIK",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows Domain",
+            "count": 0
+        },
+        {
+            "skill_name": "Group Policy",
+            "count": 0
+        },
+        {
+            "skill_name": "Communication",
+            "count": 16
+        },
+        {
+            "skill_name": "Agile Methodologies",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Creative Problem Solving",
+            "count": 0
+        },
+        {
+            "skill_name": "Presentation Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Digital Transformation",
+            "count": 3
+        },
+        {
+            "skill_name": "Signal Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Marketing",
+            "count": 3
+        },
+        {
+            "skill_name": "Mobile Devices",
+            "count": 0
+        },
+        {
+            "skill_name": "English",
+            "count": 114
+        },
+        {
+            "skill_name": "Image Processing",
+            "count": 4
+        },
+        {
+            "skill_name": "Microsoft Office",
+            "count": 7
+        },
+        {
+            "skill_name": "Test Automation",
+            "count": 0
+        },
+        {
+            "skill_name": "Analytical Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "Machine Learning",
+            "count": 26
+        },
+        {
+            "skill_name": "Selenium",
+            "count": 4
+        },
+        {
+            "skill_name": "Object-Oriented Programming (OOP)",
+            "count": 0
+        },
+        {
+            "skill_name": "Scrum",
+            "count": 26
+        },
+        {
+            "skill_name": "Human Computer Interaction",
+            "count": 1
+        },
+        {
+            "skill_name": "Proteus",
+            "count": 0
+        },
+        {
+            "skill_name": "KiCAD",
+            "count": 0
+        },
+        {
+            "skill_name": "Object Oriented Design",
+            "count": 2
+        },
+        {
+            "skill_name": "C#",
+            "count": 17
+        },
+        {
+            "skill_name": "Software Documentation",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Driven Development",
+            "count": 6
+        },
+        {
+            "skill_name": ".NET Framework",
+            "count": 1
+        },
+        {
+            "skill_name": "Data Structures",
+            "count": 2
+        },
+        {
+            "skill_name": "Critical Thinking",
+            "count": 0
+        },
+        {
+            "skill_name": "Model-View-Controller (MVC)",
+            "count": 1
+        },
+        {
+            "skill_name": "Software Development Life Cycle (SDLC)",
+            "count": 0
+        },
+        {
+            "skill_name": "JavaScript",
+            "count": 41
+        },
+        {
+            "skill_name": "Creativity Skills",
+            "count": 0
+        },
+        {
+            "skill_name": "GitHub",
+            "count": 7
+        },
+        {
+            "skill_name": "Cascading Style Sheets (CSS)",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Architectural Design",
+            "count": 0
+        },
+        {
+            "skill_name": "SQL",
+            "count": 81
+        },
+        {
+            "skill_name": "JSON",
+            "count": 13
+        },
+        {
+            "skill_name": "Lecturing",
+            "count": 0
+        },
+        {
+            "skill_name": "Qualitative Research",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Excel",
+            "count": 0
+        },
+        {
+            "skill_name": "Research",
+            "count": 12
+        },
+        {
+            "skill_name": "Simulations",
+            "count": 0
+        },
+        {
+            "skill_name": "Microsoft Word",
+            "count": 0
+        },
+        {
+            "skill_name": "GSM",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecom BSS",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications Billing",
+            "count": 0
+        },
+        {
+            "skill_name": "Team Leadership",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Project Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Performance Testing",
+            "count": 0
+        },
+        {
+            "skill_name": "Capability Maturity Model Integration (CMMI)",
+            "count": 0
+        },
+        {
+            "skill_name": "Project Planning",
+            "count": 0
+        },
+        {
+            "skill_name": "Test Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Telecommunications",
+            "count": 9
+        },
+        {
+            "skill_name": "Team Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Prepaid Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "Credit Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "Product Launch",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Development",
+            "count": 1
+        },
+        {
+            "skill_name": "Debit Cards",
+            "count": 0
+        },
+        {
+            "skill_name": "Payment Systems",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Teaching",
+            "count": 0
+        },
+        {
+            "skill_name": "Banking",
+            "count": 10
+        },
+        {
+            "skill_name": "Risk Management",
+            "count": 1
+        },
+        {
+            "skill_name": "HTML",
+            "count": 35
+        },
+        {
+            "skill_name": "Microsoft PowerPoint",
+            "count": 0
+        },
+        {
+            "skill_name": "Windows",
+            "count": 12
+        },
+        {
+            "skill_name": "Sales",
+            "count": 5
+        },
+        {
+            "skill_name": "Business Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Process Engineering",
+            "count": 0
+        },
+        {
+            "skill_name": "Software Quality Assurance",
+            "count": 0
+        },
+        {
+            "skill_name": "Unified Modeling Language (UML)",
+            "count": 0
+        },
+        {
+            "skill_name": "IT Strategy",
+            "count": 0
+        },
+        {
+            "skill_name": "ITIL Process",
+            "count": 0
+        },
+        {
+            "skill_name": "Retail Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Business Workflows",
+            "count": 0
+        },
+        {
+            "skill_name": "SME Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Internet Banking",
+            "count": 0
+        },
+        {
+            "skill_name": "Software System Analysis",
+            "count": 0
+        },
+        {
+            "skill_name": "Workflow Management",
+            "count": 0
+        },
+        {
+            "skill_name": "Financial Systems Design",
+            "count": 0
+        }
+    ]
+}

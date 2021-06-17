@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Career Path</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
+    <link href="{% static '/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Career Path. For your future.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-white" style="background-color:#5522EE;padding:124px 0px 50px">
+        <div class="container text-center">
+            <h1>Welcome to Career Path</h1>
+            <p class="lead">We are here to decide on your career.</p>
+        </div>
+    </header>
+
+    <section id="about" style='margin:100px'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Decide on your future.</h2>
+                    <p class="lead">We are career path. Here to decide on your future. Place your desired position and
+                        let us handle your career.</p>
+                    <div class="col" style="margin-bottom:10px">
+                        <div class="row">
+                            <div class="col">
+                                <input id="input-uni" placeholder="University" class="form-control"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col">
+                                <input id="input-company" placeholder="Company" class="form-control"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col">
+                                <input id="input-job" placeholder="Job Department" class="form-control"
+                                    style="text-align: center;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:10px">
+                            <div class="col">
+                                <input id="input-degree" placeholder="Degree" class="form-control"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col">
+                                <input id="input-skills" placeholder="Skills" class="form-control"
+                                    style="text-align: center;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style='display:flex;justify-content:center'><input type='button' class="btn btn-primary"
+                            id='submit-query' value="View your future."></div>
+
+                    <div id="alert" class="alert alert-danger" role="alert"
+                        style="visibility:hidden;display:flex;justify-content:center;margin-top:10px">Please enter
+                        another type of query!</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="results" style='margin:100px'>
+        <div class="container">
+            <div class="row" id="results-row">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Career Path 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <script src="{% static '/js/main.js' %}"></script>
+
+
+</body>
+
+</html>
