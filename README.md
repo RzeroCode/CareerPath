@@ -19,7 +19,7 @@ which work profession in which company I will likely end up forking for?":
 
 **As you can see in the image some skills have marks on them, indicating they are currently trending skills according to the algorithm.**
 
-**A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how is data collected and formatted and background of the project**
+*A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how is data collected and formatted and background of the project*
 
 
 ## Installation
