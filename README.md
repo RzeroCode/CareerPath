@@ -12,14 +12,14 @@ There are 5 types of queries which user can enter, the user just has to leave ot
 
 ![Image of Queries](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/queries.png)
 
-Below you can see the output screen of an example query: "I want to study computer science at Koc University which career related skills will I gain from it and 
-which work profession in which company I will likely end up forking for?":
+Below you can see the output screen of an example query: *"I want to study computer science at Koc University which career related skills will I gain from it and 
+which work profession in which company I will likely end up forking for?"*:
 ![Image of Output Screen](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/output_screen.png)
 
 
 **As you can see in the image some skills have marks on them, indicating they are currently trending skills according to the algorithm.**
 
-*A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how is data collected, formatted and background of the project*
+*A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how is data collected, formatted and background of the project.*
 
 
 ## Installation
