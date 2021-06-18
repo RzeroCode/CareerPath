@@ -24,5 +24,5 @@ which work profession in which company I will likely end up forking for?"*:
 
 ## Installation
 * Python 3 must be installed to the device, please refer to the [link to Python](https://www.python.org/downloads/)
-* Django must be installed on the device, you can install it using 'pip install Django' alternatively, refer to the [link to Django](https://www.djangoproject.com/)
+* Django must be installed on the device, you can install it using `pip install Django` alternatively, refer to the [link to Django](https://www.djangoproject.com/)
 * Postgresql must be installed, refer to the
