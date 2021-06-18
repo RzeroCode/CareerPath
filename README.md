@@ -7,7 +7,7 @@ You can see the input screen with an example query below, this image also shows 
 ![Image of Input Screen](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/input_screen.png)
 
 
-There are 5 types of queries which user can enter, the user just has to leave other input fields blank:
+There are 5 types of queries which user can enter, the user just has to leave other input fields blank (*Pink ones are user inputs green ones are algorithm outputs*):
 
 
 ![Image of Queries](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/queries.png)
