@@ -23,8 +23,8 @@ which work profession in which company I will likely end up forking for?"*:
 
 
 ## Installation
-* Python 3 must be installed to the device, please refer to the [link to Python](https://www.python.org/downloads/)
-* Django must be installed on the device, you can install it using `pip install Django` alternatively, refer to the [link to Django](https://www.djangoproject.com/)
-* Postgresql must be installed, refer to the [link to Django](https://www.postgresql.org/) for both installation and setup a database instance.
+* Python 3 must be installed to the device, please refer to the [Python Downloads Website](https://www.python.org/downloads/).
+* Django must be installed on the device, you can install it using `pip install Django` alternatively, refer to the [Django Offical Website](https://www.djangoproject.com/).
+* Postgresql must be installed, refer to the [Postgresql Offical Website](https://www.postgresql.org/) for both installation and setup a database instance.
 * A database called *careerpathdb* must be created and given sql file called *companyInsert.sql* must be run on the database, this way collected data will be automatically inserted to the db.
 * Lastly you can run the software on a local test instance using `python manage.py runserver` command in the base directory.
