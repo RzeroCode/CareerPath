@@ -12,19 +12,19 @@ There are 5 types of queries which user can enter, the user just has to leave ot
 
 ![Image of Queries](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/queries.png)
 
-Below you can see the output screen of an example query: *"I want to study computer science at Koc University which career related skills will I gain from it and 
-which work profession in which company I will likely end up forking for?"*:
+Below you can see the output screen of an example query: *"I want to study computer science at Koc University, which career related skills will I gain from it and 
+which work profession in which company I will likely end up working for?"*:
 ![Image of Output Screen](https://raw.githubusercontent.com/RzeroCode/CareerPath/main/images/output_screen.png)
 
 
 **As you can see in the image some skills have marks on them, indicating they are currently trending skills according to the algorithm.**
 
-*A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how is data collected, formatted and background of the project.*
+*A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how the data is collected and formatted. You can also learn about background of the project*
 
 
 ## Installation
 * Python 3 must be installed to the device, please refer to the [Python Downloads Website](https://www.python.org/downloads/).
 * Django must be installed on the device, you can install it using `pip install Django` alternatively, refer to the [Django Offical Website](https://www.djangoproject.com/).
 * Postgresql must be installed, refer to the [Postgresql Offical Website](https://www.postgresql.org/) for both installation and setup a database instance.
-* A database called *careerpathdb* must be created and given sql file called *companyInsert.sql* must be run on the database, this way collected data will be automatically inserted to the db.
+* A database called *careerpathdb* must be created and given SQL file called *companyInsert.sql* must be run on this database, this way collected data will be automatically inserted to the db.
 * Lastly you can run the software on a local test instance using `python manage.py runserver` command in the base directory.
