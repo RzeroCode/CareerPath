@@ -29,4 +29,5 @@ which work profession in which company I will likely end up working for?"*:
 * A database called *careerpathdb* must be created and a companies table in this database must be created using the `create table companies(company jsonb);` query.
 * Given SQL file called *companyInsert.sql* must be run on this database, this way collected data will be automatically inserted to the db.
 * Django will need the *psycopg2* library to function with PostgreSQL, install it using `pip install psycopg2`.
+* Copy `.env.example` to `.env` and fill it in: generate a new `SECRET_KEY` (the command is in the file) and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
 * Lastly you can run the software on a local test instance using `python manage.py runserver` command in the base directory.
