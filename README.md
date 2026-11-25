@@ -32,7 +32,7 @@ Needs Python 3.12 and PostgreSQL (any recent version).
    pip install -r requirements.txt
    ```
 2. Copy `.env.example` to `.env`. Generate a `SECRET_KEY` with the command in that file and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
-3. Create the database and load the data. PostgreSQL's `bin` folder must be on your PATH (the Windows installer doesn't add it). The client encoding is set to UTF-8 so Turkish characters load correctly on Windows:
+3. Create the database and load the data. PostgreSQL's `bin` folder must be on your PATH (the Windows installer doesn't add it). These commands assume a `postgres` superuser with a password, as the Windows installer creates. On Linux (apt), first give it one with `sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'yourpw'"`. On macOS (Homebrew), drop `-U postgres` and set `DB_USER` in `.env` to your login name. The client encoding is set to UTF-8 so Turkish characters load correctly on Windows:
    ```
    createdb -U postgres careerpathdb
    psql -U postgres -d careerpathdb -c "create table companies(company jsonb);"
