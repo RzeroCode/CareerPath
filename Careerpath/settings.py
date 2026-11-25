@@ -10,22 +10,37 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+def _load_dotenv(path):
+    # shortcut: plain KEY=VALUE lines only (no quotes/escapes); switch to python-dotenv if .env grows
+    if not path.exists():
+        return
+    for line in path.read_text(encoding='utf-8-sig').splitlines():
+        line = line.strip()
+        if line and not line.startswith('#') and '=' in line:
+            key, value = line.split('=', 1)
+            os.environ.setdefault(key.strip(), value.strip())
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+vm8w)9lw-rxe+l34e*i!w7_u(b=2dz3$nv-h@i()hahs5a)(c'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Real environment variables win over .env values.
+_load_dotenv(BASE_DIR / '.env')
 
-ALLOWED_HOSTS = []
+# See https://docs.djangoproject.com/en/stable/howto/deployment/checklist/
+SECRET_KEY = os.environ.get('SECRET_KEY')
+if not SECRET_KEY:
+    raise ImproperlyConfigured('SECRET_KEY is not set. Copy .env.example to .env and fill it in.')
+
+DEBUG = os.environ.get('DEBUG', 'False').lower() in ('1', 'true', 'yes')
+
+ALLOWED_HOSTS = [h.strip() for h in os.environ.get('ALLOWED_HOSTS', '').split(',') if h.strip()]
 
 
 # Application definition
@@ -76,13 +91,14 @@ WSGI_APPLICATION = 'Careerpath.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       # 'NAME': BASE_DIR / 'db.postgresql',
-        'NAME': 'careerpathdb',
-        'USER': 'postgres',
-        'PASSWORD':'postgres',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'careerpathdb'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
+        # Fail fast instead of hanging for minutes when Postgres is down.
+        'OPTIONS': {'connect_timeout': 5},
     }
 }
 
@@ -114,8 +130,6 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 

@@ -5,7 +5,6 @@ import json
 from careerapp import field_map
 from careerapp.auto_complete_lists import auto_complete_lists
 from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
 import os.path
 
 
@@ -335,7 +334,6 @@ def queryUniSkillDegree(request, uni, userSkills, degree):
         reverse=True,
     )
 
-    return_dict = {}
     arr1 = [(json.loads(x[0])["company_name"], json.loads(x[1])) for x in arr]
 
     companies_ranking = {}

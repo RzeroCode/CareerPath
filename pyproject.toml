@@ -1,0 +1,9 @@
+[tool.ruff]
+target-version = "py312"
+extend-exclude = ["graphify-out"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]  # ruff defaults, pinned so a user-level config can't change CI results
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "Careerpath.settings"

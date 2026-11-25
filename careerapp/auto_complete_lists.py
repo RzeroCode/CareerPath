@@ -18,7 +18,7 @@ class auto_complete_lists:
         return auto_complete_lists._universities
     def getCompanies() -> list:        
         if len(auto_complete_lists._companies) == 0  :
-            query = (f"""SELECT company->>'company_name' FROM companies""")
+            query = ("""SELECT company->>'company_name' FROM companies""")
             cursor = connection.cursor()
             cursor.execute(query)
             auto_complete_lists._companies = [x[0] for x in cursor.fetchall()]
