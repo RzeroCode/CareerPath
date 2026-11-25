@@ -23,11 +23,31 @@ which work profession in which company I will likely end up working for?"*:
 
 
 ## Installation
-* Python 3 must be installed to the device, please refer to the [Python Downloads Website](https://www.python.org/downloads/).
-* Django must be installed on the device, you can install it using `pip install Django` alternatively, refer to the [Django Offical Website](https://www.djangoproject.com/).
-* Postgresql must be installed, refer to the [Postgresql Offical Website](https://www.postgresql.org/) for both installation and setup a database instance. Port numbers and passwords of databases should be left blank, they should be the default values.
-* A database called *careerpathdb* must be created and a companies table in this database must be created using the `create table companies(company jsonb);` query.
-* Given SQL file called *companyInsert.sql* must be run on this database, this way collected data will be automatically inserted to the db.
-* Django will need the *psycopg2* library to function with PostgreSQL, install it using `pip install psycopg2`.
-* Copy `.env.example` to `.env` and fill it in: generate a new `SECRET_KEY` (the command is in the file) and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
-* Lastly you can run the software on a local test instance using `python manage.py runserver` command in the base directory.
+Needs Python 3.12 and PostgreSQL (any recent version).
+
+1. Create a virtual environment and install the pinned dependencies:
+   ```
+   python -m venv .venv
+   .venv\Scriptsctivate        # Windows; on macOS/Linux: source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+2. Copy `.env.example` to `.env`. Generate a `SECRET_KEY` with the command in that file and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
+3. Create the database and load the data:
+   ```
+   createdb careerpathdb
+   psql careerpathdb -c "create table companies(company jsonb);"
+   psql careerpathdb -f companyInsert.sql
+   ```
+4. Create Django's own tables and start the server:
+   ```
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+## Development
+```
+pip install -r requirements-dev.txt
+ruff check .
+pytest
+```
+CI (`.github/workflows/ci.yml`) runs the same checks against a Postgres service on every push.
