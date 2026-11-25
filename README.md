@@ -28,7 +28,7 @@ Needs Python 3.12 and PostgreSQL (any recent version).
 1. Create a virtual environment and install the pinned dependencies:
    ```
    python -m venv .venv
-   .venv\Scriptsctivate        # Windows; on macOS/Linux: source .venv/bin/activate
+   .venv\Scripts\activate        # Windows; on macOS/Linux: source .venv/bin/activate
    pip install -r requirements.txt
    ```
 2. Copy `.env.example` to `.env`. Generate a `SECRET_KEY` with the command in that file and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
