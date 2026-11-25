@@ -32,11 +32,11 @@ Needs Python 3.12 and PostgreSQL (any recent version).
    pip install -r requirements.txt
    ```
 2. Copy `.env.example` to `.env`. Generate a `SECRET_KEY` with the command in that file and set `DB_PASSWORD` to your PostgreSQL password. `.env` is ignored by git; never commit it.
-3. Create the database and load the data:
+3. Create the database and load the data. PostgreSQL's `bin` folder must be on your PATH (the Windows installer doesn't add it). The client encoding is set to UTF-8 so Turkish characters load correctly on Windows:
    ```
-   createdb careerpathdb
-   psql careerpathdb -c "create table companies(company jsonb);"
-   psql careerpathdb -f companyInsert.sql
+   createdb -U postgres careerpathdb
+   psql -U postgres -d careerpathdb -c "create table companies(company jsonb);"
+   psql -U postgres -d careerpathdb -c "\encoding UTF8" -f companyInsert.sql
    ```
 4. Create Django's own tables and start the server:
    ```
@@ -50,4 +50,4 @@ pip install -r requirements-dev.txt
 ruff check .
 pytest
 ```
-CI (`.github/workflows/ci.yml`) runs the same checks against a Postgres service on every push.
+`pytest` needs the PostgreSQL server from step 3 running. CI (`.github/workflows/ci.yml`) runs these checks plus `manage.py check --deploy` and `makemigrations --check` against a Postgres service on every push.

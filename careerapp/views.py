@@ -334,7 +334,7 @@ def queryUniSkillDegree(request, uni, userSkills, degree):
         reverse=True,
     )
 
-    arr1 =[(json.loads(x[0])["company_name"], json.loads(x[1])) for x in arr]
+    arr1 = [(json.loads(x[0])["company_name"], json.loads(x[1])) for x in arr]
 
     companies_ranking = {}
 
