@@ -61,6 +61,7 @@ def test_company_ats_rules(src):
     Company.objects.create(name="No board", source=src)
     Company.objects.create(name="Trendyol", ats_provider="lever", ats_board_token="trendyol", source=src)
     rejected(Company, name="Provider without token", ats_provider="lever", source=src)
+    rejected(Company, name="Token without provider", ats_board_token="acme", source=src)
     rejected(Company, name="Same board twice", ats_provider="lever", ats_board_token="trendyol", source=src)
 
 
@@ -71,6 +72,8 @@ def test_posting_dates_and_uniqueness(src):
     base = dict(company=c, title="Backend Engineer", url="https://example.com/1", source=src)
     JobPosting.objects.create(external_id="1", first_seen=d, last_seen=d, **base)
     rejected(JobPosting, external_id="1", first_seen=d, last_seen=d, **base)
+    other = Company.objects.create(name="Other", source=src)
+    JobPosting.objects.create(external_id="1", first_seen=d, last_seen=d, **{**base, "company": other})  # same id, other company
     rejected(JobPosting, external_id="2", first_seen=d, last_seen=d - dt.timedelta(days=1), **base)
 
 

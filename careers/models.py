@@ -114,7 +114,7 @@ class Company(Sourced):
                 name="company_unique_ats_board",
             ),
             models.CheckConstraint(
-                condition=Q(ats_provider="") | ~Q(ats_board_token=""),
+                condition=Q(ats_provider="", ats_board_token="") | (~Q(ats_provider="") & ~Q(ats_board_token="")),
                 name="company_ats_needs_token",
             ),
         ]
@@ -168,7 +168,8 @@ class JobPosting(Sourced):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=["source", "external_id"], name="posting_unique_per_source"),
+            # Some boards (e.g. Workable) number postings per company, so the company is part of the key.
+            models.UniqueConstraint(fields=["source", "company", "external_id"], name="posting_unique_per_company"),
             models.CheckConstraint(condition=Q(last_seen__gte=F("first_seen")), name="posting_seen_order"),
         ]
 
