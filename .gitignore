@@ -6,9 +6,10 @@ venv/
 .pytest_cache/
 .ruff_cache/
 
-# Local config and data
+# Local config and data (datasets stay private while the code is open source)
 .env
 db.sqlite3
+/data/
 
 # Frontend
 node_modules/
