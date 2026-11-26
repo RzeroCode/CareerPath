@@ -10,6 +10,8 @@ venv/
 .env
 db.sqlite3
 /data/
+# Private data-collection app (separate repository)
+/ingest/
 
 # Frontend
 node_modules/

@@ -22,6 +22,16 @@ which work profession in which company I will likely end up working for?"*:
 *A 25 page lengthy scientific report will be provided if asked, it includes how the scoring algorithm works, how the data is collected and formatted. You can also learn about background of the project*
 
 
+## Data
+The repository contains the application code. The collected data and the tools that collect it are not published.
+
+Sources: [YÖK Atlas](https://yokatlas.yok.gov.tr), [TÜİK](https://www.tuik.gov.tr), [ISCED-F 2013](https://uis.unesco.org/en/topic/international-standard-classification-education-isced) and the [O\*NET database](https://www.onetcenter.org/database.html).
+
+- Graduate outcome figures: TÜİK (Türkiye İstatistik Kurumu), *Yükseköğretim İstihdam Göstergeleri*.
+- This project includes information from the [O\*NET 31.0 Database](https://www.onetcenter.org/database.html) by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. O\*NET® is a trademark of USDOL/ETA. CareerPath has modified all or some of this information. USDOL/ETA has not approved, endorsed, or tested these modifications.
+
+The web app itself still runs on an older 2021 dataset (`companyInsert.sql`), which is being retired.
+
 ## Installation
 Needs Python 3.12 and PostgreSQL (any recent version).
 
