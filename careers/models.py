@@ -115,7 +115,7 @@ class Company(Sourced):
             ),
             models.CheckConstraint(
                 condition=Q(ats_provider="", ats_board_token="") | (~Q(ats_provider="") & ~Q(ats_board_token="")),
-                name="company_ats_needs_token",
+                name="company_ats_both_or_neither",
             ),
         ]
 
