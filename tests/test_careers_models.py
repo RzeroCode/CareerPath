@@ -107,3 +107,11 @@ def test_source_dashboard_counts_rows_and_flags_stale(admin_client):
 
     page = admin_client.get(reverse("admin:careers_source_changelist")).context["cl"]
     assert {s.name: s.rows for s in page.queryset} == {"Weekly fresh": 2, "Weekly old": 0, "Never fetched": 0, "Classification": 0}
+
+    def flagged():
+        cl = admin_client.get(reverse("admin:careers_source_changelist")).context["cl"]
+        return {s.name for s in cl.queryset if cl.model_admin.stale(s)}
+
+    assert flagged() == set()  # the stale sources have no rows: replaced, so not flagged
+    Skill.objects.create(name="Go", source=old)
+    assert flagged() == {"Weekly old"}

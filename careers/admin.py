@@ -31,7 +31,7 @@ class SourceAdmin(admin.ModelAdmin):
 
     @admin.display(boolean=True)
     def stale(self, obj):
-        return obj.is_stale
+        return obj.is_stale and obj.rows > 0  # a source left with no rows has been replaced, not neglected
 
 
 class SourcedAdmin(admin.ModelAdmin):
