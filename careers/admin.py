@@ -1,12 +1,37 @@
+from django.apps import apps
 from django.contrib import admin
+from django.db.models import Count, IntegerField, OuterRef, Subquery, Value
+from django.db.models.functions import Coalesce
 
 from . import models as m
 
 
+def rows_per_source():
+    """Data rows pointing at each source, summed over every table that has a source."""
+    total = Value(0)
+    for model in apps.get_app_config("careers").get_models():
+        if issubclass(model, m.Sourced):
+            count = model.objects.filter(source=OuterRef("pk")).order_by().values("source").annotate(n=Count("pk")).values("n")
+            total = total + Coalesce(Subquery(count, output_field=IntegerField()), 0)
+    return total
+
+
 @admin.register(m.Source)
 class SourceAdmin(admin.ModelAdmin):
-    list_display = ["name", "licence", "fetched_at"]
+    list_display = ["name", "rows", "fetched_at", "refresh_days", "stale", "licence"]
     search_fields = ["name"]
+    ordering = ["name"]
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).annotate(rows=rows_per_source())
+
+    @admin.display(ordering="rows")
+    def rows(self, obj):
+        return obj.rows
+
+    @admin.display(boolean=True)
+    def stale(self, obj):
+        return obj.is_stale
 
 
 class SourcedAdmin(admin.ModelAdmin):

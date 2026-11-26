@@ -4,6 +4,7 @@ import pytest
 from django.apps import apps
 from django.db import IntegrityError, transaction
 from django.urls import reverse
+from django.utils import timezone
 
 from careers.models import Company, Field, JobPosting, OutcomeStat, ProgramType, Skill, SkillDemandMonthly, Source, University
 
@@ -91,3 +92,18 @@ def test_admin_pages_render(admin_client, model):
     opts = model._meta
     assert admin_client.get(reverse(f"admin:{opts.app_label}_{opts.model_name}_changelist")).status_code == 200
     assert admin_client.get(reverse(f"admin:{opts.app_label}_{opts.model_name}_add")).status_code == 200
+
+
+@pytest.mark.django_db
+def test_source_dashboard_counts_rows_and_flags_stale(admin_client):
+    now = timezone.now()
+    fresh = Source.objects.create(name="Weekly fresh", fetched_at=now - dt.timedelta(days=2), refresh_days=7)
+    old = Source.objects.create(name="Weekly old", fetched_at=now - dt.timedelta(days=8), refresh_days=7)
+    never = Source.objects.create(name="Never fetched", refresh_days=365)
+    fixed = Source.objects.create(name="Classification")  # no refresh_days: never stale
+    Skill.objects.create(name="Python", source=fresh)
+    Field.objects.create(name="ICT", isced_code="06", source=fresh)
+    assert [s.is_stale for s in (fresh, old, never, fixed)] == [False, True, True, False]
+
+    page = admin_client.get(reverse("admin:careers_source_changelist")).context["cl"]
+    assert {s.name: s.rows for s in page.queryset} == {"Weekly fresh": 2, "Weekly old": 0, "Never fetched": 0, "Classification": 0}

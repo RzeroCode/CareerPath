@@ -1,6 +1,9 @@
 """CareerPath data model (plan section 1e). Every data row points to the Source it came from."""
+from datetime import timedelta
+
 from django.db import models
 from django.db.models import F, Q
+from django.utils import timezone
 
 
 class Source(models.Model):
@@ -8,9 +11,17 @@ class Source(models.Model):
     licence = models.CharField(max_length=200, blank=True)
     url = models.URLField(max_length=500, blank=True)
     fetched_at = models.DateTimeField(null=True, blank=True, help_text="When the data was last fetched")
+    refresh_days = models.PositiveSmallIntegerField(
+        null=True, blank=True, help_text="Refresh at least this often, in days; empty for data that doesn't go stale")
 
     def __str__(self):
         return self.name
+
+    @property
+    def is_stale(self):
+        if self.refresh_days is None:
+            return False
+        return self.fetched_at is None or self.fetched_at < timezone.now() - timedelta(days=self.refresh_days)
 
 
 class Sourced(models.Model):
