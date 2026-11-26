@@ -23,7 +23,7 @@ which work profession in which company I will likely end up working for?"*:
 
 
 ## Data
-The repository contains the application code. The collected data and the tools that collect it are not published.
+The repository contains the application code. Newly collected data and the tools that collect it are not published.
 
 Sources: [YÖK Atlas](https://yokatlas.yok.gov.tr), [TÜİK](https://www.tuik.gov.tr), [ISCED-F 2013](https://uis.unesco.org/en/topic/international-standard-classification-education-isced) and the [O\*NET database](https://www.onetcenter.org/database.html).
 
