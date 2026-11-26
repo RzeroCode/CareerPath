@@ -162,6 +162,7 @@ class JobPosting(Sourced):
     location = models.CharField(max_length=300, blank=True)
     country = models.CharField(max_length=2, blank=True, help_text="ISO 3166-1 alpha-2, e.g. TR")
     url = models.URLField(max_length=500)
+    description = models.TextField(blank=True, help_text="Plain text of the posting, for skill extraction")
     first_seen = models.DateField()
     last_seen = models.DateField()
     skills = models.ManyToManyField(Skill, blank=True, related_name="postings")
