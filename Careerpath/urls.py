@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from careerapp import views
+from careers.api import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', api.urls),
     path('', views.careerapp, name='careerapp'),
     path('API/query/<int:queryType>', views.incomingQuery, name='careerapp'),
     path('API/auto-complete/<int:completeType>', views.autoComplete, name='careerapp'),

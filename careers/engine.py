@@ -184,12 +184,15 @@ def _skills(scope, held):
     scope_total = scoped.count()
     scope_companies = scoped.values("company").distinct().count()
     all_total = JobPosting.objects.count()
-    # Lift divides by all postings, so every posting's source is evidence.
-    evidence = _posting_evidence(JobPosting.objects.all(), {"scope_postings": scope_total, "all_postings": all_total})
+    section = {
+        "scope_postings": scope_total, "scope_companies": scope_companies, "all_postings": all_total,
+        "needs": {"postings": MIN_SCOPE_POSTINGS, "companies": MIN_SCOPE_COMPANIES, "per_skill": MIN_SKILL_POSTINGS},
+        "scope_label": "global: postings from every country, open or closed",
+        # Lift divides by all postings, so every posting's source is evidence.
+        "evidence": _posting_evidence(JobPosting.objects.all(), scope_total),
+    }
     if scope_total < MIN_SCOPE_POSTINGS or scope_companies < MIN_SCOPE_COMPANIES:
-        return {"enough_data": False, "scope_postings": scope_total, "scope_companies": scope_companies,
-                "needs": {"postings": MIN_SCOPE_POSTINGS, "companies": MIN_SCOPE_COMPANIES}, "items": [],
-                "evidence": evidence}
+        return {**section, "enough_data": False, "items": []}
 
     counts = (SkillLink.objects.filter(jobposting__in=scoped).values("skill_id")
               .annotate(n=Count("jobposting_id", distinct=True)).filter(n__gte=MIN_SKILL_POSTINGS))
@@ -204,13 +207,11 @@ def _skills(scope, held):
             ranked.append((lift, mentions[skill.pk], skill))
     ranked.sort(key=lambda r: (-r[0], -r[1], tr_key(r[2].name)))
     return {
-        "enough_data": True, "scope_postings": scope_total, "scope_companies": scope_companies,
-        "scope_label": "global: postings from every country, open or closed",
+        **section, "enough_data": True,
         "items": [{"skill": _ref(s), "lift": round(float(lift), 2), "mentions": n,
                    "share_in_scope": round(n / scope_total, 3), "held": s.pk in held_ids,
                    "onet_hot": s.onet_hot}  # badge source: O*NET (US)
                   for lift, n, s in ranked],
-        "evidence": evidence,
     }
 
 

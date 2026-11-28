@@ -42,6 +42,10 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() in ('1', 'true', 'yes')
 
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get('ALLOWED_HOSTS', '').split(',') if h.strip()]
 
+# Proxies in front of the app that append to X-Forwarded-For. The API's rate limit identifies clients by address:
+# 0 uses the connection address, so a client can't dodge the limit with a forged header.
+NINJA_NUM_PROXIES = int(os.environ.get('NINJA_NUM_PROXIES', '0'))
+
 
 # Application definition
 

@@ -179,7 +179,7 @@ def test_skills_ranked_by_lift(w):
         ("Dosing", 1.67, 5), ("Bandaging", 1.2, 9), ("Anatomy", 1.2, 6), ("Triage", 1.2, 6)]
     assert [i["held"] for i in section["items"]] == [False, False, False, True]
     assert [i["onet_hot"] for i in section["items"]] == [True, False, False, False]
-    assert section["evidence"]["sample_size"] == {"scope_postings": 20, "all_postings": 40}
+    assert (section["evidence"]["sample_size"], section["all_postings"]) == (20, 40)
     assert "rising" not in str(section)
     plain = run(program_type=w.med.pk)["sections"]["skills"]["items"]
     with_company = run(program_type=w.med.pk, company=w.delta.pk)["sections"]["skills"]["items"]
