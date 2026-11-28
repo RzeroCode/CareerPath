@@ -70,7 +70,7 @@ def test_type_filters_and_no_type_returns_every_kind(d):
 
 
 @pytest.mark.parametrize("params", [{"q": "x"}, {"q": ""}, {"q": " i "}, {}, {"q": "ab", "type": "city"},
-                                    {"q": "a" * 101}])
+                                    {"q": "a" * 101}, {"q": "ab\x00cd"}, {"q": "\x00\x00"}])
 def test_bad_queries_are_422(d, params):
     assert search(**params).status_code == 422
 
@@ -79,6 +79,13 @@ def test_bad_queries_are_422(d, params):
 def test_special_characters_are_plain_text(d, q):
     r = search(q=q)
     assert r.status_code == 200 and not any(r.json()["results"].values())  # % and _ are not wildcards
+
+
+@pytest.mark.parametrize("stored, q", [("Ørsted", "Ørsted"), ("Ørsted", "orsted"), ("Łódź Hub", "łódź"),
+                                       ("Women’s health", "women’s")])
+def test_query_and_names_fold_alike(d, stored, q):
+    Company.objects.create(name=stored, source=Source.objects.get())
+    assert names(search(q=q, type="company"), "company") == [stored]
 
 
 def test_no_match_is_empty(d):
@@ -108,6 +115,7 @@ def test_short_queries_skip_typo_matching(d):
 
 def test_name_start_before_word_start_before_inside(d):
     src = Source.objects.get()
-    for name in ["Care planning", "Daycare", "Patient care"]:
+    for name in ["Care planning", "Daycare", "Patient care", "Nursing (care)"]:
         Skill.objects.create(name=name, source=src)
-    assert names(search(q="care", type="skill"), "skill") == ["Care planning", "Patient care", "Wound care", "Daycare"]
+    assert names(search(q="care", type="skill"), "skill") == [
+        "Care planning", "Nursing (care)", "Patient care", "Wound care", "Daycare"]

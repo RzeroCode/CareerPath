@@ -6,6 +6,7 @@ from datetime import date
 from typing import Annotated, Literal
 
 from django.contrib.postgres.search import TrigramStrictWordSimilarity
+from django.db import connection
 from django.db.models import Case, F, Func, Q, Value, When
 from django.db.models.functions import Greatest, Lower
 from django.middleware.csrf import get_token
@@ -192,7 +193,11 @@ def recommendations(request, profile: ProfileIn):
          description="Matches English and Turkish names, ignoring case and Turkish letters "
                      "(\"bogazici\" finds Boğaziçi), and tolerates a typo.")
 def search(request, q: str = Query(..., min_length=2, max_length=100), type: Kind | None = None):
-    query = norm(q)
+    if "\x00" in q:  # Postgres text can't hold it
+        raise ValidationError([{"loc": ["query", "q"], "msg": "Invalid character.", "type": "value_error"}])
+    with connection.cursor() as cursor:  # fold the query exactly as the names are folded below (ø, ł, ’ too)
+        cursor.execute("SELECT lower(unaccent(%s))", [norm(q)])
+        query = cursor.fetchone()[0]
     if len(query) < 2:
         raise ValidationError([{"loc": ["query", "q"], "msg": "Give at least 2 letters.", "type": "value_error"}])
     return {"results": {kind: _search(SEARCHED[kind], query) for kind in ([type] if type else SEARCHED)}}
@@ -202,10 +207,11 @@ def _search(model, query):
     """Text matches first (name start, then a word start, then inside a word), then typo matches."""
     columns = [c for c in ("name", "name_tr") if any(f.name == c for f in model._meta.fields)]
     rows = model.objects.annotate(**{f"plain_{c}": Lower(Func(F(c), function="unaccent")) for c in columns})
-    contains, word_start, name_start = Q(), Q(), Q()  # same folding as norm(): "Işık" -> "isik"
+    contains, word_start, name_start = Q(), Q(), Q()  # "Işık" -> "isik", as the query was folded
     for c in columns:
         contains |= Q(**{f"plain_{c}__contains": query})
-        word_start |= Q(**{f"plain_{c}__contains": " " + query})
+        for before in " (-/":  # "Computer Science (English)" starts a word at "english"
+            word_start |= Q(**{f"plain_{c}__contains": before + query})
         name_start |= Q(**{f"plain_{c}__startswith": query})
     sims = [TrigramStrictWordSimilarity(query, f"plain_{c}") for c in columns]
     rows = rows.annotate(sim=Greatest(*sims) if len(sims) > 1 else sims[0],
