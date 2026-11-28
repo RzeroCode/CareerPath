@@ -86,7 +86,7 @@ def test_internal_fields_stay_out(d, path):
 
 
 @pytest.mark.parametrize("kind", ["universities", "program-types", "companies", "skills"])
-@pytest.mark.parametrize("id_", ["999999", "0", "00", "-1", "abc", "1.5", "%D9%A1", "%20", "99999999999999999999"])
+@pytest.mark.parametrize("id_", ["999999", "0", "00", "-1", "abc", "1.5", "%D9%A1", "%20", "99999999999999999999", "9" * 5000])
 def test_unknown_ids_are_json_404(d, kind, id_):
     r = get(f"{kind}/{id_}")  # %D9%A1 is an Arabic-Indic 1: a digit to isdigit(), not to us
     assert r.status_code == 404 and r["Content-Type"].startswith("application/json") and r.json()["detail"]

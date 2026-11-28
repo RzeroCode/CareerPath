@@ -280,7 +280,7 @@ def _ref(obj):
 
 def _detail(queryset, id):
     """The id is taken as text so a malformed one (abc, -1, 1.5) gets the same JSON 404 as an unknown one."""
-    obj = queryset.filter(pk=int(id)).first() if id.isascii() and id.isdigit() else None
+    obj = queryset.filter(pk=int(id)).first() if id.isascii() and id.isdigit() and len(id) <= 18 else None  # int() fails past 4300 digits
     if obj is None:
         raise HttpError(404, f"No {queryset.model._meta.verbose_name} with id {id}.")
     return obj
