@@ -81,7 +81,7 @@ class SkillAdmin(SourcedAdmin):
 
 @admin.register(m.Company)
 class CompanyAdmin(SourcedAdmin):
-    list_display = ["name", "sector", "ats_provider", "ats_board_token", "source"]
+    list_display = ["name", "sector", "ats_provider", "ats_board_token", "last_fetched", "source"]
     list_filter = ["ats_provider", "sector", "source"]
     search_fields = ["name"]
 

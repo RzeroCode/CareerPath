@@ -8,7 +8,8 @@ refer to earlier ones by name):
   universities   name*, name_tr, aliases, city, kind (state|foundation), yok_code
   programs       university*, program_type*, name_tr*, osym_code
   skills         name*, name_tr, aliases, onet_hot
-  companies      name*, aliases, sector
+  companies      name*, aliases, sector, last_fetched (date its postings were last all fetched; postings
+                 not seen since then, or a company not fetched for 28 days, count as closed)
   outcomes       program_type or field (one)*, metric*, value*, year*, sample_size
   postings       company*, external_id*, title*, url*, first_seen*, last_seen*, location, country, description, skills
 
@@ -277,7 +278,7 @@ SECTIONS = {  # section: (loader, allowed keys, required keys)
     "universities": (Command.load_university, {"name", "name_tr", "aliases", "city", "kind", "yok_code"}, ["name"]),
     "programs": (Command.load_program, {"university", "program_type", "name_tr", "osym_code"}, ["university", "program_type", "name_tr"]),
     "skills": (Command.load_skill, {"name", "name_tr", "aliases", "onet_hot"}, ["name"]),
-    "companies": (Command.load_company, {"name", "aliases", "sector"}, ["name"]),
+    "companies": (Command.load_company, {"name", "aliases", "sector", "last_fetched"}, ["name"]),
     "outcomes": (Command.load_outcome, {"program_type", "field", "metric", "value", "year", "sample_size"}, ["metric", "value", "year"]),
     "postings": (Command.load_posting, {"company", "external_id", "title", "url", "first_seen", "last_seen", "location",
                                         "country", "description", "skills"}, ["company", "external_id", "title", "url", "first_seen", "last_seen"]),

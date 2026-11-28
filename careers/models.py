@@ -117,6 +117,7 @@ class Company(Sourced):
     sector = models.CharField(max_length=100, blank=True)
     ats_provider = models.CharField(max_length=20, choices=Ats.choices, blank=True)
     ats_board_token = models.CharField(max_length=100, blank=True)
+    last_fetched = models.DateField(null=True, blank=True, help_text="Last successful fetch of all its open postings")
 
     class Meta:
         verbose_name_plural = "companies"
@@ -167,6 +168,17 @@ class OutcomeStat(Sourced):
         return f"{self.program_type or self.field} {self.metric} {self.year}: {self.value}"
 
 
+OPEN_DAYS = 28  # a company not fetched for longer than this has no open postings
+
+
+class JobPostingQuerySet(models.QuerySet):
+    def open(self, today=None):
+        """Seen in the company's last successful fetch, and that fetch is recent."""
+        today = today or timezone.localdate()
+        return self.filter(company__last_fetched__gte=today - timedelta(days=OPEN_DAYS),
+                           last_seen__gte=F("company__last_fetched"))
+
+
 class JobPosting(Sourced):
     company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name="postings")
     external_id = models.CharField(max_length=200, help_text="The job board's own id for the posting")
@@ -179,6 +191,8 @@ class JobPosting(Sourced):
     first_seen = models.DateField()
     last_seen = models.DateField()
     skills = models.ManyToManyField(Skill, blank=True, related_name="postings")
+
+    objects = JobPostingQuerySet.as_manager()
 
     class Meta:
         constraints = [

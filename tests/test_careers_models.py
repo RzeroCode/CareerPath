@@ -115,3 +115,36 @@ def test_source_dashboard_counts_rows_and_flags_stale(admin_client):
     assert flagged() == set()  # the stale sources have no rows: replaced, so not flagged
     Skill.objects.create(name="Go", source=old)
     assert flagged() == {"Weekly old"}
+
+
+@pytest.mark.django_db
+def test_open_postings_need_the_last_fetch_and_a_recent_one(src):
+    from careers.models import OPEN_DAYS
+    today = dt.date(2026, 12, 1)
+    fetched = today - dt.timedelta(days=3)
+
+    def posting(company, external_id, last_seen):
+        return JobPosting.objects.create(company=company, external_id=external_id, title="T", url="https://example.org",
+                                         first_seen=last_seen, last_seen=last_seen, source=src)
+
+    co = Company.objects.create(name="Co", last_fetched=fetched, source=src)
+    posting(co, "seen", fetched)
+    posting(co, "gone", fetched - dt.timedelta(days=1))
+    never = Company.objects.create(name="Never fetched", source=src)
+    posting(never, "x", fetched)
+    assert set(JobPosting.objects.open(today).values_list("external_id", flat=True)) == {"seen"}
+    assert JobPosting.objects.open(fetched + dt.timedelta(days=OPEN_DAYS)).filter(external_id="seen").exists()
+    assert not JobPosting.objects.open(fetched + dt.timedelta(days=OPEN_DAYS + 1)).exists()
+
+
+@pytest.mark.django_db
+def test_backfill_takes_each_companys_newest_last_seen(src):
+    import importlib
+    backfill = importlib.import_module("careers.migrations.0006_company_last_fetched").backfill
+    co = Company.objects.create(name="Co", source=src)
+    Company.objects.create(name="No postings", source=src)
+    for i, day in enumerate([dt.date(2026, 11, 1), dt.date(2026, 11, 26)]):
+        JobPosting.objects.create(company=co, external_id=str(i), title="T", url="https://example.org",
+                                  first_seen=day, last_seen=day, source=src)
+    backfill(apps, None)
+    assert dict(Company.objects.values_list("name", "last_fetched")) == {"Co": dt.date(2026, 11, 26), "No postings": None}

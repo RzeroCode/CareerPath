@@ -1,3 +1,4 @@
+import datetime as dt
 import json
 from pathlib import Path
 
@@ -51,6 +52,7 @@ def test_example_loads_every_row_with_its_source(capsys):
     assert Program.objects.get(name_tr="Tıp (İngilizce)").university.name == "Example Medical University"
     assert set(JobPosting.objects.get().skills.values_list("name", flat=True)) == {"Patient care", "Electronic health records"}
     assert OutcomeStat.objects.get(field__isnull=False).sample_size == 1200
+    assert JobPosting.objects.open(dt.date(2026, 11, 21)).count() == 1
 
 
 @pytest.mark.django_db

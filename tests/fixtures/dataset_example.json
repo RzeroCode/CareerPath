@@ -21,7 +21,7 @@
     {"name": "Electronic health records", "aliases": ["EHR"]}
   ],
   "companies": [
-    {"name": "Sample Hospital Group", "aliases": ["SHG"], "sector": "Health"}
+    {"name": "Sample Hospital Group", "aliases": ["SHG"], "sector": "Health", "last_fetched": "2026-11-20"}
   ],
   "outcomes": [
     {"program_type": "Medicine", "metric": "employment_rate", "value": 91.5, "year": 2025},
