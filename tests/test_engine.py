@@ -251,3 +251,39 @@ def test_bad_profiles(w, profile, field):
     with pytest.raises(ProfileError) as e:
         run(**profile)
     assert e.value.field == field
+
+
+def test_stale_companies_are_not_tracked_and_two_type_postings_count_once(w):
+    Company.objects.filter(pk=w.gamma.pk).update(last_fetched=TODAY - dt.timedelta(days=29))
+    Company.objects.filter(pk=w.delta.pk).update(last_fetched=TODAY - dt.timedelta(days=28))
+    post(w, w.gamma, [w.med])  # its fetch is too old: closed
+    for i in range(20):
+        post(w, [w.alpha, w.beta, w.delta][i % 3], [w.med, w.nur])
+    result = run(field=w.health.pk)["sections"]
+    assert result["companies_hiring"]["companies_tracked"] == 3
+    assert "Gamma" not in [i["company"]["name"] for i in result["companies_hiring"]["items"]]
+    assert result["skills"]["scope_postings"] == 21
+
+
+def test_programs_asked_for_counts_only_linked_postings(w):
+    post(w, w.alpha, [w.med])
+    post(w, w.alpha, [])  # names no program
+    post(w, w.alpha, [w.law])  # outside the scope below
+    section = run(company=w.alpha.pk, field=w.health.pk)["sections"]["programs_asked_for"]
+    assert section["evidence"]["sample_size"] == 1
+
+
+def test_outcome_queries_do_not_grow_with_the_number_of_programs(w):
+    from django.db import connection
+    from django.test.utils import CaptureQueriesContext
+
+    def queries():
+        with CaptureQueriesContext(connection) as ctx:
+            run(field=w.health.pk)
+        return len(ctx)
+
+    before = queries()
+    for i in range(10):
+        pt = ProgramType.objects.create(name=f"Health {i}", field=w.health, source=w.src)
+        OutcomeStat.objects.create(program_type=pt, metric="employment_rate", value=70, year=2025, source=w.src)
+    assert queries() == before

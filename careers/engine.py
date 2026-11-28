@@ -4,10 +4,10 @@ Plain functions over the careers tables: no HTTP, no AI, and nothing tied to tod
 where its numbers come from (sources, as_of = oldest fetch used, sample size).
 """
 from dataclasses import dataclass, field as dc_field
-from datetime import timedelta
+from datetime import datetime, timedelta
 from fractions import Fraction
 
-from django.db.models import Count, F
+from django.db.models import Count, F, Q
 from django.utils import timezone
 
 from careers.matching import tr_key
@@ -122,7 +122,7 @@ def _open_in_turkey(today):
 
 
 def _evidence(sources, dates, sample_size):
-    dates = [d.date() if hasattr(d, "date") else d for d in dates if d]
+    dates = [timezone.localdate(d) if isinstance(d, datetime) else d for d in dates if d]
     return {"sources": sorted(set(sources), key=tr_key), "as_of": min(dates, default=None), "sample_size": sample_size}
 
 
@@ -133,19 +133,23 @@ def _posting_evidence(postings, sample_size, dates=None):
 
 # --- sections -----------------------------------------------------------------------------------
 
-def _latest(figures):
-    """Latest year; for two sources with the same year, the one fetched last."""
-    return figures.select_related("source").order_by("-year", F("source__fetched_at").desc(nulls_last=True), "-pk").first()
-
-
 def _outcomes(scope):
+    types = scope or []
+    rows = (OutcomeStat.objects
+            .filter(Q(program_type__in=types) | Q(field_id__in={t.field_id for t in types if t.field_id}))
+            .select_related("source")
+            .order_by("-year", F("source__fetched_at").desc(nulls_last=True), "-pk"))  # same year: fetched last
+    latest = {}  # one query for every type and field; the first row per target and metric is the latest
+    for row in rows:
+        target = ("program_type", row.program_type_id) if row.program_type_id else ("field", row.field_id)
+        latest.setdefault((*target, row.metric), row)
     items, used = [], []
-    for pt in scope or []:
+    for pt in types:
         figures = []
         for metric in OutcomeStat.Metric:
-            row, level = _latest(OutcomeStat.objects.filter(program_type=pt, metric=metric)), "program_type"
+            row, level = latest.get(("program_type", pt.pk, metric.value)), "program_type"
             if row is None and pt.field_id:
-                row, level = _latest(OutcomeStat.objects.filter(field_id=pt.field_id, metric=metric)), "field"
+                row, level = latest.get(("field", pt.field_id, metric.value)), "field"
             if row is None:
                 continue
             used.append(row)
@@ -180,7 +184,8 @@ def _skills(scope, held):
     scope_total = scoped.count()
     scope_companies = scoped.values("company").distinct().count()
     all_total = JobPosting.objects.count()
-    evidence = _posting_evidence(scoped, {"scope_postings": scope_total, "all_postings": all_total})
+    # Lift divides by all postings, so every posting's source is evidence.
+    evidence = _posting_evidence(JobPosting.objects.all(), {"scope_postings": scope_total, "all_postings": all_total})
     if scope_total < MIN_SCOPE_POSTINGS or scope_companies < MIN_SCOPE_COMPANIES:
         return {"enough_data": False, "scope_postings": scope_total, "scope_companies": scope_companies,
                 "needs": {"postings": MIN_SCOPE_POSTINGS, "companies": MIN_SCOPE_COMPANIES}, "items": [],
@@ -219,11 +224,12 @@ def _programs_asked_for(scope, company, skills, today):
     rows = list(links.values("programtype_id", "programtype__name", "programtype__name_tr")
                 .annotate(n=Count("jobposting_id", distinct=True)))
     rows.sort(key=lambda r: (-r["n"], tr_key(r["programtype__name"])))
+    counted = postings.filter(pk__in=links.values("jobposting_id"))  # only postings that name a program in scope
     return {
         "items": [{"program_type": {"id": r["programtype_id"], "name": r["programtype__name"],
                                     "name_tr": r["programtype__name_tr"]}, "open_postings": r["n"]} for r in rows],
-        "evidence": _posting_evidence(postings, postings.count(),
-                                      postings.values_list("company__last_fetched", flat=True).distinct()),
+        "evidence": _posting_evidence(counted, counted.count(),
+                                      counted.values_list("company__last_fetched", flat=True).distinct()),
     }
 
 
