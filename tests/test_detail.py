@@ -86,9 +86,10 @@ def test_internal_fields_stay_out(d, path):
 
 
 @pytest.mark.parametrize("kind", ["universities", "program-types", "companies", "skills"])
-@pytest.mark.parametrize("id_", ["999999", "0", "-1", "abc", "1.5", "99999999999999999999"])
-def test_unknown_ids_are_404(d, kind, id_):
-    assert get(f"{kind}/{id_}").status_code == 404
+@pytest.mark.parametrize("id_", ["999999", "0", "00", "-1", "abc", "1.5", "%D9%A1", "%20", "99999999999999999999"])
+def test_unknown_ids_are_json_404(d, kind, id_):
+    r = get(f"{kind}/{id_}")  # %D9%A1 is an Arabic-Indic 1: a digit to isdigit(), not to us
+    assert r.status_code == 404 and r["Content-Type"].startswith("application/json") and r.json()["detail"]
 
 
 def test_queries_do_not_grow_with_programs(d):
@@ -114,3 +115,8 @@ def test_university_programs_in_turkish_order(d):
         Program.objects.create(university=d["cukurova"], program_type=pt, name_tr=name, source=d["src"])
     programs = get(f"universities/{d['cukurova'].pk}").json()["programs"]
     assert [p["name_tr"] for p in programs] == ["Çocuk Gelişimi", "Diş Hekimliği", "Hemşirelik", "Hemşirelik (İÖ)"]
+
+
+def test_non_ascii_digits_are_not_an_id(d):
+    arabic = "".join(chr(0x660 + int(c)) for c in str(d["skill"].pk))  # int() would read it as the real id
+    assert get(f"skills/{arabic}").status_code == 404

@@ -10,7 +10,6 @@ from django.db import connection
 from django.db.models import Case, F, Func, Q, Value, When
 from django.db.models.functions import Greatest, Lower
 from django.middleware.csrf import get_token
-from django.shortcuts import get_object_or_404
 from ninja import Field, NinjaAPI, Query, Schema
 from ninja.errors import HttpError, ValidationError
 from ninja.throttling import AnonRateThrottle
@@ -279,28 +278,36 @@ def _ref(obj):
     return {"id": obj.pk, "name": obj.name, "name_tr": getattr(obj, "name_tr", "")}
 
 
-@api.get("/v1/universities/{int:id}", response={200: UniversityOut, **DETAIL_ERRORS}, summary="A university")
-def university(request, id: int):
-    uni = get_object_or_404(University.objects.select_related("source"), pk=id)
+def _detail(queryset, id):
+    """The id is taken as text so a malformed one (abc, -1, 1.5) gets the same JSON 404 as an unknown one."""
+    obj = queryset.filter(pk=int(id)).first() if id.isascii() and id.isdigit() else None
+    if obj is None:
+        raise HttpError(404, f"No {queryset.model._meta.verbose_name} with id {id}.")
+    return obj
+
+
+@api.get("/v1/universities/{id}", response={200: UniversityOut, **DETAIL_ERRORS}, summary="A university")
+def university(request, id: str):
+    uni = _detail(University.objects.select_related("source"), id)
     programs = sorted(Program.objects.filter(university=uni).select_related("program_type"),
-                      key=lambda p: tr_key(p.name_tr))
+                      key=lambda p: (tr_key(p.name_tr), p.pk))
     return {**_ref(uni), "city": uni.city, "kind": uni.kind, "source": uni.source,
             "programs": [{"program_type": _ref(p.program_type), "name_tr": p.name_tr} for p in programs]}
 
 
-@api.get("/v1/program-types/{int:id}", response={200: ProgramTypeOut, **DETAIL_ERRORS}, summary="A program type")
-def program_type(request, id: int):
-    pt = get_object_or_404(ProgramType.objects.select_related("source", "field"), pk=id)
+@api.get("/v1/program-types/{id}", response={200: ProgramTypeOut, **DETAIL_ERRORS}, summary="A program type")
+def program_type(request, id: str):
+    pt = _detail(ProgramType.objects.select_related("source", "field"), id)
     universities = sorted(University.objects.filter(programs__program_type=pt).distinct(), key=lambda u: tr_key(u.name))
     return {**_ref(pt), "field": _ref(pt.field) if pt.field else None, "source": pt.source,
             "universities": [_ref(u) for u in universities]}
 
 
-@api.get("/v1/companies/{int:id}", response={200: CompanyOut, **DETAIL_ERRORS}, summary="A company")
-def company(request, id: int):
-    return get_object_or_404(Company.objects.select_related("source"), pk=id)
+@api.get("/v1/companies/{id}", response={200: CompanyOut, **DETAIL_ERRORS}, summary="A company")
+def company(request, id: str):
+    return _detail(Company.objects.select_related("source"), id)
 
 
-@api.get("/v1/skills/{int:id}", response={200: SkillOut, **DETAIL_ERRORS}, summary="A skill")
-def skill(request, id: int):
-    return get_object_or_404(Skill.objects.select_related("source"), pk=id)
+@api.get("/v1/skills/{id}", response={200: SkillOut, **DETAIL_ERRORS}, summary="A skill")
+def skill(request, id: str):
+    return _detail(Skill.objects.select_related("source"), id)
