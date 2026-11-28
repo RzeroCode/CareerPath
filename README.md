@@ -84,4 +84,4 @@ pip install -r requirements-dev.txt
 ruff check .
 pytest
 ```
-`pytest` needs the PostgreSQL server from step 3 running. CI (`.github/workflows/ci.yml`) runs these checks plus `manage.py check --deploy` and `makemigrations --check` against a Postgres service on every push.
+`pytest` needs the PostgreSQL server from step 3 running. CI (`.github/workflows/ci.yml`) runs these checks plus `manage.py check --deploy` and `makemigrations --check` against a Postgres service on every push. It also builds and starts the Docker setup, loads the home page and runs `pytest` inside it.
