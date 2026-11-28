@@ -41,6 +41,7 @@ class University(Sourced):
     city = models.CharField(max_length=100, blank=True)
     kind = models.CharField(max_length=20, choices=Kind.choices, blank=True)
     yok_code = models.CharField(max_length=20, unique=True, null=True, blank=True)
+    aliases = models.JSONField(default=list, blank=True, help_text="Other names, used to match incoming data")
 
     class Meta:
         verbose_name_plural = "universities"
@@ -64,17 +65,18 @@ class ProgramType(Sourced):
     name = models.CharField(max_length=200, unique=True)
     name_tr = models.CharField(max_length=200, blank=True)
     field = models.ForeignKey(Field, on_delete=models.PROTECT, null=True, blank=True, related_name="program_types")
+    aliases = models.JSONField(default=list, blank=True, help_text="Other names, used to match incoming data")
 
     def __str__(self):
         return self.name
 
 
 class Program(Sourced):
-    """One university's program, identified by its ÖSYM program code."""
+    """One university's program; the ÖSYM program code identifies it when the source has one."""
     university = models.ForeignKey(University, on_delete=models.CASCADE, related_name="programs")
     program_type = models.ForeignKey(ProgramType, on_delete=models.PROTECT, related_name="programs")
     name_tr = models.CharField(max_length=300, help_text="Full name as YÖK Atlas lists it, e.g. with language")
-    osym_code = models.CharField(max_length=20, unique=True)
+    osym_code = models.CharField(max_length=20, unique=True, null=True, blank=True)
 
     def __str__(self):
         return f"{self.university} · {self.name_tr}"
@@ -83,7 +85,7 @@ class Program(Sourced):
 class Occupation(Sourced):
     name = models.CharField(max_length=300)
     name_tr = models.CharField(max_length=300, blank=True)
-    esco_uri = models.URLField(max_length=300, unique=True)
+    esco_uri = models.URLField(max_length=300, unique=True, null=True, blank=True)
     isco_code = models.CharField(max_length=10, blank=True)
 
     def __str__(self):

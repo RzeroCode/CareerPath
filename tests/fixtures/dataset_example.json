@@ -1,0 +1,35 @@
+{
+  "source": {"name": "Example dataset", "licence": "made up for tests", "url": "https://example.org/data", "fetched_at": "2026-11-20T09:00:00+03:00", "refresh_days": 30},
+  "fields": [
+    {"isced_code": "09", "name": "Health and Welfare", "name_tr": "Sağlık ve Refah"}
+  ],
+  "program_types": [
+    {"name": "Medicine", "name_tr": "Tıp", "aliases": ["Doctor of Medicine", "MD"], "field": "09"},
+    {"name": "Nursing", "name_tr": "Hemşirelik", "field": "Health and Welfare"}
+  ],
+  "universities": [
+    {"name": "Example Medical University", "name_tr": "Örnek Tıp Üniversitesi", "aliases": ["EMU"], "city": "İzmir", "kind": "state"},
+    {"name": "Sample Health University", "name_tr": "Numune Sağlık Üniversitesi", "city": "Ankara", "kind": "foundation"}
+  ],
+  "programs": [
+    {"university": "ORNEK TIP UNIVERSITESI", "program_type": "tip", "name_tr": "Tıp (İngilizce)"},
+    {"university": "EMU", "program_type": "Nursing", "name_tr": "Hemşirelik"},
+    {"university": "Sample Health University", "program_type": "Hemşirelik", "name_tr": "Hemşirelik", "osym_code": "X-0001"}
+  ],
+  "skills": [
+    {"name": "Patient care", "name_tr": "Hasta bakımı"},
+    {"name": "Electronic health records", "aliases": ["EHR"]}
+  ],
+  "companies": [
+    {"name": "Sample Hospital Group", "aliases": ["SHG"], "sector": "Health"}
+  ],
+  "outcomes": [
+    {"program_type": "Medicine", "metric": "employment_rate", "value": 91.5, "year": 2025},
+    {"field": "09", "metric": "field_match_rate", "value": 70.25, "year": 2025, "sample_size": 1200}
+  ],
+  "postings": [
+    {"company": "SHG", "external_id": "job-1", "title": "Ward Nurse", "url": "https://example.org/jobs/1", "country": "TR",
+     "location": "İzmir", "description": "Bachelor's degree in Nursing required.", "first_seen": "2026-11-01", "last_seen": "2026-11-20",
+     "skills": ["patient care", "EHR"]}
+  ]
+}

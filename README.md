@@ -30,6 +30,8 @@ Sources: [YÖK Atlas](https://yokatlas.yok.gov.tr), [TÜİK](https://www.tuik.go
 - Graduate outcome figures: TÜİK (Türkiye İstatistik Kurumu), *Yükseköğretim İstihdam Göstergeleri*.
 - This project includes information from the [O\*NET 31.0 Database](https://www.onetcenter.org/database.html) by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. O\*NET® is a trademark of USDOL/ETA. CareerPath has modified all or some of this information. USDOL/ETA has not approved, endorsed, or tested these modifications.
 
+**Loading data:** any collector can fill the database by writing one JSON file and running `python manage.py load_dataset <file>`. The format is described at the top of [careers/management/commands/load_dataset.py](careers/management/commands/load_dataset.py), with a made-up example in [tests/fixtures/dataset_example.json](tests/fixtures/dataset_example.json). Rows that fail a check are listed with the reason and left out; the rest are saved, and running the same file again changes nothing.
+
 The query screen still runs on an older 2021 dataset (`companyInsert.sql`). It is out of date and will be removed once the new version replaces it.
 
 ## Run with Docker
