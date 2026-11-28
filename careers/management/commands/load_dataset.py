@@ -13,9 +13,11 @@ refer to earlier ones by name):
   postings       company*, external_id*, title*, url*, first_seen*, last_seen*, location, country, description, skills
 
 (* = required.) Rows refer to each other by code, name, Turkish name or alias, matched ignoring case and
-Turkish accents. A row that matches an existing record updates it; otherwise it is added. Every saved row
-is stamped with the file's source. A row with an unknown key, a bad value or a reference that matches
-nothing (or more than one record) is rejected and reported; the other rows are still saved.
+Turkish accents. A row that matches an existing record updates it; otherwise it is added. Aliases only
+accumulate (remove one in the admin), and a replaced name becomes an alias. Codes are never erased or
+swapped through a name match. Every saved row is stamped with the file's source. A row with an unknown
+key, a bad value or a reference that matches nothing (or more than one record) is rejected and reported;
+the other rows are still saved, and the command exits with an error.
 See tests/fixtures/dataset_example.json.
 """
 import json
@@ -23,11 +25,12 @@ import unicodedata
 
 from django.core.exceptions import ValidationError
 from django.core.management.base import BaseCommand, CommandError
-from django.db import IntegrityError, transaction
+from django.db import DataError, IntegrityError, transaction
 
 from careers.models import Company, Field, JobPosting, OutcomeStat, Program, ProgramType, Skill, Source, University
 
 SOURCE_KEYS = {"name", "licence", "url", "fetched_at", "refresh_days"}
+BAD_VALUE = (DataError, ValueError, TypeError)  # what a wrong type or a NUL character raises below full_clean
 
 
 class RowError(Exception):
@@ -84,9 +87,9 @@ class Command(BaseCommand):
 
     def handle(self, path, **options):
         try:
-            with open(path, encoding="utf-8") as f:
+            with open(path, encoding="utf-8-sig") as f:  # -sig: Windows tools add a byte order mark
                 data = json.load(f)
-        except (OSError, json.JSONDecodeError) as e:
+        except (OSError, ValueError) as e:
             raise CommandError(f"Can't read {path}: {e}")
         if not isinstance(data, dict) or not isinstance(data.get("source"), dict):
             raise CommandError('The file must be a JSON object with a "source" object.')
@@ -109,7 +112,7 @@ class Command(BaseCommand):
                             raise RowError("not an object")
                         if extra := set(row) - allowed:
                             raise RowError(f"unknown keys: {', '.join(sorted(extra))}")
-                        if missing := [k for k in required if row.get(k) in (None, "")]:
+                        if missing := [k for k in required if row.get(k) is None or str(row[k]).strip() == ""]:
                             raise RowError(f"missing: {', '.join(missing)}")
                         with transaction.atomic():
                             loader(self, row)
@@ -120,24 +123,30 @@ class Command(BaseCommand):
                         report.append(f"{section}[{i}]: {'; '.join(_messages(e))}")
                     except IntegrityError as e:
                         report.append(f"{section}[{i}]: database refused it ({e})")
+                    except BAD_VALUE as e:
+                        report.append(f"{section}[{i}]: bad value ({e})")
                 if rows:
                     self.stdout.write(f"{section}: {saved} saved, {len(rows) - saved} rejected")
         for line in report:
             self.stderr.write(f"Rejected {line}")
+        if report:  # raised after the commit: good rows stay, and scripts see a failing exit code
+            raise CommandError(f"{len(report)} rows rejected; the others were saved.")
 
     def load_source(self, row):
         if extra := set(row) - SOURCE_KEYS:
             raise CommandError(f"Unknown source keys: {', '.join(sorted(extra))}")
         if not row.get("name"):
             raise CommandError("The source needs a name.")
-        source = Source.objects.filter(name=row["name"]).first() or Source(name=row["name"])
-        for k, v in row.items():
-            setattr(source, k, v)
         try:
+            source = Source.objects.filter(name=row["name"]).first() or Source(name=row["name"])
+            for k, v in row.items():
+                setattr(source, k, v)
             source.full_clean()
+            source.save()
         except ValidationError as e:
             raise CommandError(f"Bad source: {'; '.join(_messages(e))}")
-        source.save()
+        except BAD_VALUE as e:
+            raise CommandError(f"Bad source: {e}")
         return source
 
     def finder(self, model, code_field=None):
@@ -149,8 +158,6 @@ class Command(BaseCommand):
         for k, v in row.items():
             if k not in skip:
                 setattr(obj, k, v)
-        if not all(isinstance(a, str) for a in _as_list(getattr(obj, "aliases", []))):
-            raise RowError("aliases must be a list of strings")
         obj.source = self.source
         obj.full_clean()
         obj.save()
@@ -159,18 +166,30 @@ class Command(BaseCommand):
     def upsert_named(self, model, row, code_field=None, **refs):
         """Fields, program types, universities, skills and companies: matched by code, then by any name."""
         finder = self.finder(model, code_field)
-        names = [row.get("name"), row.get("name_tr"), *_as_list(row.get("aliases"))]
+        new_aliases = _as_list(row.get("aliases"))
+        if not all(isinstance(a, str) and a.strip() for a in new_aliases):
+            raise RowError("aliases must be a list of non-empty strings")
+        names = [row.get("name"), row.get("name_tr"), *new_aliases]
         matches = {m for n in names if n if (m := finder.find(name=n)) is not None}
-        by_code = finder.find(code=row.get(code_field)) if code_field else None
+        code = row.get(code_field) if code_field else None
+        by_code = finder.find(code=code) if code else None
         if by_code:
-            matches = {by_code}
+            matches.add(by_code)
         if len(matches) > 1:
-            raise RowError(f"its names match {len(matches)} different records")
-        obj = matches.pop() if matches else model()
-        if obj.pk and norm(obj.name) != norm(row["name"]):  # renamed: keep the old name so later files still match it
-            aliases = _as_list(row.get("aliases", obj.aliases if hasattr(obj, "aliases") else None))
-            if hasattr(obj, "aliases") and norm(obj.name) not in {norm(a) for a in aliases}:
-                row = {**row, "aliases": [*aliases, obj.name]}
+            raise RowError(f"its code and names match {len(matches)} different records")
+        # A fresh copy, so a rejected row leaves nothing on the cached one.
+        obj = model.objects.get(pk=matches.pop().pk) if matches else model()
+        if code and not by_code and obj.pk and getattr(obj, code_field) not in (None, "", str(code)):
+            raise RowError(f"{obj.name!r} already has a different code ({getattr(obj, code_field)})")
+        if code_field and not code:
+            row = {k: v for k, v in row.items() if k != code_field}  # an empty code never erases one
+        if obj.pk and hasattr(obj, "aliases"):
+            replaced = [old for key in ("name", "name_tr")
+                        if (old := getattr(obj, key, "")) and key in row and norm(old) != norm(row[key])]
+            merged = {}
+            for alias in [*obj.aliases, *new_aliases, *replaced]:
+                merged.setdefault(norm(alias), alias)
+            row = {**row, "aliases": list(merged.values())}
         obj = self.save(obj, {**row, **refs})
         finder.add(obj)
         return obj
@@ -189,9 +208,19 @@ class Command(BaseCommand):
         university = self.finder(University, "yok_code").get(row["university"])
         program_type = self.finder(ProgramType).get(row["program_type"])
         code = row.get("osym_code") or None
-        obj = (Program.objects.filter(osym_code=code).first() if code
-               else Program.objects.filter(university=university, name_tr=row["name_tr"]).first())
-        self.save(obj or Program(), {**row, "osym_code": code, "university": university, "program_type": program_type})
+        obj = Program.objects.filter(osym_code=code).first() if code else None
+        if obj is None:  # by university and name; with a new code, only a program that has none yet
+            candidates = Program.objects.filter(university=university)
+            if code:
+                candidates = candidates.filter(osym_code__isnull=True)
+            same = [p for p in candidates if norm(p.name_tr) == norm(row["name_tr"])]
+            if len(same) > 1:
+                raise RowError(f"matches {len(same)} programs; give its osym_code")
+            obj = same[0] if same else Program()
+        row = {k: v for k, v in row.items() if k != "osym_code"}
+        if code:
+            row["osym_code"] = code
+        self.save(obj, {**row, "university": university, "program_type": program_type})
 
     def load_skill(self, row):
         self.upsert_named(Skill, row)
