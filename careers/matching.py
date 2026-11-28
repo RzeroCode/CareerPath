@@ -10,6 +10,16 @@ def norm(text):
     return " ".join(text.casefold().split())
 
 
+TR_ALPHABET = "abcçdefgğhıijklmnoöpqrsştuüvwxyz"
+_TR_ORDER = {c: i for i, c in enumerate(TR_ALPHABET)}
+
+
+def tr_key(text):
+    """Sort key for Turkish alphabetical order: C < Ç, I (ı) < İ (i), O < Ö; other characters before letters."""
+    text = str(text).replace("I", "ı").replace("İ", "i").lower()
+    return [(1, _TR_ORDER[c]) if c in _TR_ORDER else (0, ord(c)) for c in text]
+
+
 def strings(value):
     """A stored name list; admin input may be any JSON, and a single string counts as one name."""
     if isinstance(value, str):
