@@ -161,13 +161,12 @@ def test_aliases_are_merged_and_old_names_kept(loaded, tmp_path):
 
 
 @pytest.mark.parametrize("section, row", [
-    ("fields", {"isced_code": "0912", "name": "Health and Welfare"}),
     ("universities", {"name": "EMU", "yok_code": "3"}),
 ])
 def test_new_code_on_a_name_with_another_code_is_rejected(loaded, tmp_path, capsys, section, row):
     University.objects.filter(name="Example Medical University").update(yok_code="1")
     assert "different code" in load(tmp_path, {"source": S, section: [row]}, capsys)
-    assert Field.objects.get().isced_code == "09" and University.objects.get(name="Example Medical University").yok_code == "1"
+    assert University.objects.get(name="Example Medical University").yok_code == "1"
 
 
 @pytest.mark.parametrize("section, row", [
@@ -215,3 +214,27 @@ def test_file_with_a_byte_order_mark_loads(db, tmp_path):
     path.write_bytes(b"\xef\xbb\xbf" + EXAMPLE.read_bytes())
     call_command("load_dataset", str(path))
     assert University.objects.count() == 2
+
+
+def test_fields_with_the_same_name_are_told_apart_by_code(db, tmp_path):
+    rows = [{"isced_code": "042", "name": "Law"}, {"isced_code": "0421", "name": "Law"}]
+    load(tmp_path, {"source": S, "fields": rows})
+    load(tmp_path, {"source": S, "fields": [{**rows[0], "name_tr": "Hukuk"}]})
+    assert dict(Field.objects.values_list("isced_code", "name_tr")) == {"042": "Hukuk", "0421": ""}
+
+
+def test_blank_turkish_names_do_not_merge_records(db, tmp_path):
+    load(tmp_path, {"source": S, "skills": [{"name": "Welding", "name_tr": " "}, {"name": "Accounting", "name_tr": " "}]})
+    assert Skill.objects.count() == 2
+
+
+def test_huge_number_rejects_only_its_row(loaded, tmp_path, capsys):
+    row = {"program_type": "Medicine", "metric": "employment_rate", "value": 1, "year": float("inf")}
+    assert "outcomes[0]" in load(tmp_path, {"source": S, "outcomes": [row]}, capsys)
+
+
+def test_odd_stored_or_sent_aliases(loaded, tmp_path):
+    University.objects.filter(name="Example Medical University").update(aliases="EMU")  # a string typed in the admin
+    load(tmp_path, {"source": S, "universities": [{"name": "EMU", "aliases": ["Emu Uni"]}], "skills": [{"name": "New", "aliases": None}]})
+    assert {"EMU", "Emu Uni"} <= set(University.objects.get(name="EMU").aliases) and "E" not in University.objects.get(name="EMU").aliases
+    assert Skill.objects.get(name="New").aliases == []

@@ -3,7 +3,7 @@
 The file is JSON: a "source" object, then any of these lists (loaded in this order, so later rows can
 refer to earlier ones by name):
 
-  fields         isced_code*, name*, name_tr
+  fields         isced_code*, name*, name_tr (matched by isced_code only: ISCED-F repeats names)
   program_types  name*, name_tr, aliases, field (ISCED code or name)
   universities   name*, name_tr, aliases, city, kind (state|foundation), yok_code
   programs       university*, program_type*, name_tr*, osym_code
@@ -30,7 +30,7 @@ from django.db import DataError, IntegrityError, transaction
 from careers.models import Company, Field, JobPosting, OutcomeStat, Program, ProgramType, Skill, Source, University
 
 SOURCE_KEYS = {"name", "licence", "url", "fetched_at", "refresh_days"}
-BAD_VALUE = (DataError, ValueError, TypeError)  # what a wrong type or a NUL character raises below full_clean
+BAD_VALUE = (DataError, ValueError, TypeError, OverflowError)  # wrong types, NUL characters, 1e400
 
 
 class RowError(Exception):
@@ -54,8 +54,8 @@ class Finder:
             self.add(obj)
 
     def add(self, obj):
-        names = [getattr(obj, "name", ""), getattr(obj, "name_tr", ""), *getattr(obj, "aliases", [])]
-        for key in {norm(n) for n in names if n}:
+        names = [getattr(obj, "name", ""), getattr(obj, "name_tr", ""), *_stored_aliases(obj)]
+        for key in {norm(n) for n in names if n} - {""}:  # blank names must not match each other
             prev = self.keys.get(key)
             self.keys[key] = obj if prev is None or prev == obj else self.AMBIGUOUS
 
@@ -164,7 +164,9 @@ class Command(BaseCommand):
         return obj
 
     def upsert_named(self, model, row, code_field=None, **refs):
-        """Fields, program types, universities, skills and companies: matched by code, then by any name."""
+        """Program types, universities, skills and companies: matched by code and by any name."""
+        if row.get("aliases") is None:
+            row = {k: v for k, v in row.items() if k != "aliases"}
         finder = self.finder(model, code_field)
         new_aliases = _as_list(row.get("aliases"))
         if not all(isinstance(a, str) and a.strip() for a in new_aliases):
@@ -187,7 +189,7 @@ class Command(BaseCommand):
             replaced = [old for key in ("name", "name_tr")
                         if (old := getattr(obj, key, "")) and key in row and norm(old) != norm(row[key])]
             merged = {}
-            for alias in [*obj.aliases, *new_aliases, *replaced]:
+            for alias in [*_stored_aliases(obj), *new_aliases, *replaced]:
                 merged.setdefault(norm(alias), alias)
             row = {**row, "aliases": list(merged.values())}
         obj = self.save(obj, {**row, **refs})
@@ -195,7 +197,9 @@ class Command(BaseCommand):
         return obj
 
     def load_field(self, row):
-        self.upsert_named(Field, row, "isced_code")
+        # By code only: ISCED-F repeats names across levels (042 and 0421 are both "Law").
+        obj = Field.objects.filter(isced_code=row["isced_code"]).first() or Field()
+        self.finder(Field, "isced_code").add(self.save(obj, row))
 
     def load_program_type(self, row):
         refs = {"field": self.finder(Field, "isced_code").get(row["field"])} if row.get("field") else {}
@@ -243,6 +247,14 @@ class Command(BaseCommand):
         obj = self.save(obj or JobPosting(), {**row, "company": company}, skip={"skills"})
         if "skills" in row:
             obj.skills.set(skills)
+
+
+def _stored_aliases(obj):
+    """The admin accepts any JSON, so a single string is one alias, not a list of letters."""
+    value = getattr(obj, "aliases", [])
+    if isinstance(value, str):
+        return [value]
+    return [a for a in value if isinstance(a, str)] if isinstance(value, list) else []
 
 
 def _as_list(value):
