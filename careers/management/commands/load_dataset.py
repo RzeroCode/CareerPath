@@ -4,7 +4,8 @@ The file is JSON: a "source" object, then any of these lists (loaded in this ord
 refer to earlier ones by name):
 
   fields         isced_code*, name*, name_tr (matched by isced_code only: ISCED-F repeats names)
-  program_types  name*, name_tr, aliases, field (ISCED code or name)
+  program_types  name*, name_tr, aliases, field (ISCED code or name), degree_terms (more names job ads use for
+                 this degree; one may belong to several programs, e.g. "Computer Science" for Computer Engineering)
   universities   name*, name_tr, aliases, city, kind (state|foundation), yok_code
   programs       university*, program_type*, name_tr*, osym_code
   skills         name*, name_tr, aliases, onet_hot
@@ -22,12 +23,12 @@ the other rows are still saved, and the command exits with an error.
 See tests/fixtures/dataset_example.json.
 """
 import json
-import unicodedata
 
 from django.core.exceptions import ValidationError
 from django.core.management.base import BaseCommand, CommandError
 from django.db import DataError, IntegrityError, transaction
 
+from careers.matching import norm, strings
 from careers.models import Company, Field, JobPosting, OutcomeStat, Program, ProgramType, Skill, Source, University
 
 SOURCE_KEYS = {"name", "licence", "url", "fetched_at", "refresh_days"}
@@ -36,13 +37,6 @@ BAD_VALUE = (DataError, ValueError, TypeError, OverflowError)  # wrong types, NU
 
 class RowError(Exception):
     pass
-
-
-def norm(text):
-    """'İSTANBUL', 'Istanbul' and 'istanbul' all give 'istanbul'; 'Boğaziçi' gives 'bogazici'."""
-    text = str(text).replace("ı", "i").replace("İ", "i")
-    text = "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
-    return " ".join(text.casefold().split())
 
 
 class Finder:
@@ -193,6 +187,8 @@ class Command(BaseCommand):
             for alias in [*_stored_aliases(obj), *new_aliases, *replaced]:
                 merged.setdefault(norm(alias), alias)
             row = {**row, "aliases": list(merged.values())}
+        if obj.pk and row.get("degree_terms") is not None:
+            row = {**row, "degree_terms": _merge(strings(obj.degree_terms), row["degree_terms"])}
         obj = self.save(obj, {**row, **refs})
         finder.add(obj)
         return obj
@@ -204,6 +200,9 @@ class Command(BaseCommand):
 
     def load_program_type(self, row):
         refs = {"field": self.finder(Field, "isced_code").get(row["field"])} if row.get("field") else {}
+        if "degree_terms" in row:  # accumulate like aliases
+            if not all(isinstance(t, str) and t.strip() for t in _as_list(row["degree_terms"])):
+                raise RowError("degree_terms must be a list of non-empty strings")
         self.upsert_named(ProgramType, row, **refs)
 
     def load_university(self, row):
@@ -250,12 +249,15 @@ class Command(BaseCommand):
             obj.skills.set(skills)
 
 
+def _merge(old, new):
+    merged = {}
+    for item in [*old, *new]:
+        merged.setdefault(norm(item), item)
+    return list(merged.values())
+
+
 def _stored_aliases(obj):
-    """The admin accepts any JSON, so a single string is one alias, not a list of letters."""
-    value = getattr(obj, "aliases", [])
-    if isinstance(value, str):
-        return [value]
-    return [a for a in value if isinstance(a, str)] if isinstance(value, list) else []
+    return strings(getattr(obj, "aliases", []))
 
 
 def _as_list(value):
@@ -274,7 +276,7 @@ def _messages(error):
 
 SECTIONS = {  # section: (loader, allowed keys, required keys)
     "fields": (Command.load_field, {"isced_code", "name", "name_tr"}, ["isced_code", "name"]),
-    "program_types": (Command.load_program_type, {"name", "name_tr", "aliases", "field"}, ["name"]),
+    "program_types": (Command.load_program_type, {"name", "name_tr", "aliases", "field", "degree_terms"}, ["name"]),
     "universities": (Command.load_university, {"name", "name_tr", "aliases", "city", "kind", "yok_code"}, ["name"]),
     "programs": (Command.load_program, {"university", "program_type", "name_tr", "osym_code"}, ["university", "program_type", "name_tr"]),
     "skills": (Command.load_skill, {"name", "name_tr", "aliases", "onet_hot"}, ["name"]),

@@ -240,3 +240,23 @@ def test_odd_stored_or_sent_aliases(loaded, tmp_path):
     load(tmp_path, {"source": S, "universities": [{"name": "EMU", "aliases": ["Emu Uni"]}], "skills": [{"name": "New", "aliases": None}]})
     assert {"EMU", "Emu Uni"} <= set(University.objects.get(name="EMU").aliases) and "E" not in University.objects.get(name="EMU").aliases
     assert Skill.objects.get(name="New").aliases == []
+
+
+def test_link_programs_works_on_any_programs_and_reads_only_descriptions(loaded, tmp_path, capsys):
+    posting = JobPosting.objects.get()  # "Bachelor's degree in Nursing required."
+    posting.title = "Medicine degree holder wanted"  # titles are not read
+    posting.save()
+    call_command("link_programs")
+    call_command("link_programs")  # rerun: same links, no duplicates
+    assert list(posting.program_types.values_list("name", flat=True)) == ["Nursing"]
+    assert "1 of 1 postings linked" in capsys.readouterr().out
+
+    load(tmp_path, {"source": S, "program_types": [{"name": "Medicine", "degree_terms": ["Nursing"]},
+                                                  {"name": "Medicine", "degree_terms": ["Hemşirelik"]}]})
+    assert ProgramType.objects.get(name="Medicine").degree_terms == ["Nursing", "Hemşirelik"]  # accumulated
+    call_command("link_programs")
+    assert set(posting.program_types.values_list("name", flat=True)) == {"Nursing", "Medicine"}
+
+    JobPosting.objects.filter(pk=posting.pk).update(description="Shift work in a busy ward.")
+    call_command("link_programs")
+    assert not posting.program_types.exists()

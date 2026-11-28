@@ -96,10 +96,10 @@ class OutcomeStatAdmin(SourcedAdmin):
 @admin.register(m.JobPosting)
 class JobPostingAdmin(SourcedAdmin):
     list_display = ["title", "company", "country", "first_seen", "last_seen", "source"]
-    list_filter = ["country", "source"]
+    list_filter = ["country", "program_types", "source"]
     list_select_related = ["company", "source"]
     search_fields = ["title", "company__name"]
-    autocomplete_fields = ["company", "occupation", "skills"]
+    autocomplete_fields = ["company", "occupation", "skills", "program_types"]
 
 
 @admin.register(m.SkillDemandMonthly)

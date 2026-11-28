@@ -66,6 +66,9 @@ class ProgramType(Sourced):
     name_tr = models.CharField(max_length=200, blank=True)
     field = models.ForeignKey(Field, on_delete=models.PROTECT, null=True, blank=True, related_name="program_types")
     aliases = models.JSONField(default=list, blank=True, help_text="Other names, used to match incoming data")
+    degree_terms = models.JSONField(
+        default=list, blank=True,
+        help_text="More names that count as this degree in job ads; unlike aliases, one may belong to several programs")
 
     def __str__(self):
         return self.name
@@ -191,6 +194,8 @@ class JobPosting(Sourced):
     first_seen = models.DateField()
     last_seen = models.DateField()
     skills = models.ManyToManyField(Skill, blank=True, related_name="postings")
+    program_types = models.ManyToManyField(
+        ProgramType, blank=True, related_name="postings", help_text="Degrees the description asks for (link_programs)")
 
     objects = JobPostingQuerySet.as_manager()
 
