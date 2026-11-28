@@ -158,7 +158,7 @@ def csrf(request):
     return {"csrf_token": get_token(request)}
 
 
-@api.post("/v1/recommendations", response={200: RecommendationOut, 403: ErrorOut, 422: ErrorOut, 429: ErrorOut},
+@api.post("/v1/recommendations", response={200: RecommendationOut, 400: ErrorOut, 403: ErrorOut, 422: ErrorOut, 429: ErrorOut},
           summary="Recommendations for a profile")
 def recommendations(request, profile: ProfileIn):
     # Ninja skips Django's CSRF check for views without cookie auth, so it is done here.

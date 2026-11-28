@@ -7,7 +7,7 @@ from django.core.cache import cache
 from django.test import Client
 from django.utils import timezone
 
-from careers.models import Company, Field, JobPosting, Program, ProgramType, Skill, Source, University
+from careers.models import Company, Field, JobPosting, OutcomeStat, Program, ProgramType, Skill, Source, University
 
 URL = "/api/v1/recommendations"
 
@@ -118,7 +118,10 @@ def test_csrf_is_checked(d):
     assert r.status_code == 403 and "X-CSRFToken" in r.json()["detail"]
     token = client.get("/api/v1/csrf").json()["csrf_token"]
     assert "csrftoken" in client.cookies
+    assert post({"company": d["company"]}, client, HTTP_X_CSRFTOKEN="x" * 32).status_code == 403  # wrong token
     assert post({"company": d["company"]}, client, HTTP_X_CSRFTOKEN=token).status_code == 200
+    as_text = client.post(URL, json.dumps({"company": d["company"]}), content_type="text/plain")  # no token
+    assert as_text.status_code in (403, 422)  # never runs the engine; 422 when parsing fails first
 
 
 def test_rate_limit_per_address_ignores_forged_forwarded_for(db):
@@ -138,3 +141,34 @@ def test_docs_and_schema_are_served(db):
     profile = schema["components"]["schemas"]["ProfileIn"]
     assert profile["additionalProperties"] is False and set(profile["properties"]) == {
         "university", "program_type", "field", "company", "skills"}
+
+
+def test_outcome_figures_and_ranked_skills_fit_the_schema(d):
+    """The response paths a schema mismatch would break: figures with a null sample size and a field fallback,
+    and a ranked skills list."""
+    src = Source.objects.get()
+    OutcomeStat.objects.create(program_type_id=d["program_type"], metric="employment_rate", value="81.25", year=2025,
+                               sample_size=None, source=src)
+    OutcomeStat.objects.create(field_id=d["field"], metric="field_match_rate", value="60.5", year=2025,
+                               sample_size=900, source=src)
+    med = ProgramType.objects.get(pk=d["program_type"])
+    rare = Skill.objects.create(name="Suturing", source=src)
+    companies = [Company.objects.create(name=f"Co {i}", last_fetched=timezone.localdate(), source=src) for i in range(3)]
+    for i in range(30):  # 20 in scope from 3 companies, 10 outside; Suturing only in scope
+        p = JobPosting.objects.create(company=companies[i % 3], external_id=f"x{i}", title="T", url="https://example.org",
+                                      country="TR", first_seen=dt.date(2026, 11, 1), last_seen=timezone.localdate(),
+                                      source=src)
+        if i < 20:
+            p.program_types.add(med)
+            if i < 6:
+                p.skills.add(rare)
+    r = post({"program_type": d["program_type"], "skills": [rare.pk]})
+    assert r.status_code == 200, r.content
+    sections = r.json()["sections"]
+    figures = {f["metric"]: f for f in sections["outcomes"]["items"][0]["figures"]}
+    assert figures["employment_rate"]["value"] == 81.25 and figures["employment_rate"]["sample_size"] is None
+    assert figures["employment_rate"]["sample_size_note"] == "not published"
+    assert (figures["field_match_rate"]["level"], figures["field_match_rate"]["sample_size"]) == ("field", 900)
+    skills = sections["skills"]
+    assert skills["enough_data"] is True and skills["items"][0]["skill"]["name"] == "Suturing"
+    assert skills["items"][0]["held"] is True and skills["items"][0]["lift"] > 1
