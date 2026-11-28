@@ -5,14 +5,19 @@ Docs: /api/docs (OpenAPI schema at /api/openapi.json). Every response number car
 from datetime import date
 from typing import Annotated, Literal
 
+from django.contrib.postgres.search import TrigramStrictWordSimilarity
+from django.db.models import Case, F, Func, Q, Value, When
+from django.db.models.functions import Greatest, Lower
 from django.middleware.csrf import get_token
-from ninja import Field, NinjaAPI, Schema
+from ninja import Field, NinjaAPI, Query, Schema
 from ninja.errors import HttpError, ValidationError
 from ninja.throttling import AnonRateThrottle
 from ninja.utils import check_csrf
 from pydantic import ConfigDict
 
 from careers.engine import Profile, ProfileError, recommend
+from careers.matching import norm
+from careers.models import Company, Field as FieldModel, ProgramType, Skill, University
 
 api = NinjaAPI(
     title="CareerPath API",
@@ -150,6 +155,18 @@ class CsrfOut(Schema):
     csrf_token: str
 
 
+Kind = Literal["university", "program_type", "field", "company", "skill"]
+SEARCHED = {"university": University, "program_type": ProgramType, "field": FieldModel, "company": Company,
+            "skill": Skill}
+SEARCH_LIMIT = 20  # per kind
+MIN_SIMILARITY = 0.4  # strict trigram word similarity: a missing or extra letter still matches
+MIN_FUZZY_LENGTH = 4  # shorter queries match as text only; trigrams of 2-3 letters are noise
+
+
+class SearchOut(Schema):
+    results: dict[Kind, list[Ref]] = Field(description="Best matches first; at most 20 per kind")
+
+
 # --- endpoints ----------------------------------------------------------------------------------
 
 @api.get("/v1/csrf", response=CsrfOut, summary="Get a CSRF token",
@@ -169,3 +186,30 @@ def recommendations(request, profile: ProfileIn):
     except ProfileError as e:
         loc = ["body", "profile"] + ([e.field] if e.field else [])
         raise ValidationError([{"loc": loc, "msg": str(e), "type": "value_error"}])
+
+
+@api.get("/v1/search", response={200: SearchOut, 422: ErrorOut, 429: ErrorOut}, summary="Find ids by name",
+         description="Matches English and Turkish names, ignoring case and Turkish letters "
+                     "(\"bogazici\" finds Boğaziçi), and tolerates a typo.")
+def search(request, q: str = Query(..., min_length=2, max_length=100), type: Kind | None = None):
+    query = norm(q)
+    if len(query) < 2:
+        raise ValidationError([{"loc": ["query", "q"], "msg": "Give at least 2 letters.", "type": "value_error"}])
+    return {"results": {kind: _search(SEARCHED[kind], query) for kind in ([type] if type else SEARCHED)}}
+
+
+def _search(model, query):
+    """Text matches first (name start, then a word start, then inside a word), then typo matches."""
+    columns = [c for c in ("name", "name_tr") if any(f.name == c for f in model._meta.fields)]
+    rows = model.objects.annotate(**{f"plain_{c}": Lower(Func(F(c), function="unaccent")) for c in columns})
+    contains, word_start, name_start = Q(), Q(), Q()  # same folding as norm(): "Işık" -> "isik"
+    for c in columns:
+        contains |= Q(**{f"plain_{c}__contains": query})
+        word_start |= Q(**{f"plain_{c}__contains": " " + query})
+        name_start |= Q(**{f"plain_{c}__startswith": query})
+    sims = [TrigramStrictWordSimilarity(query, f"plain_{c}") for c in columns]
+    rows = rows.annotate(sim=Greatest(*sims) if len(sims) > 1 else sims[0],
+                         rank=Case(When(name_start, then=Value(3)), When(word_start, then=Value(2)),
+                                   When(contains, then=Value(1)), default=Value(0)))
+    found = contains | Q(sim__gte=MIN_SIMILARITY) if len(query) >= MIN_FUZZY_LENGTH else contains
+    return list(rows.filter(found).order_by("-rank", "-sim", "name")[:SEARCH_LIMIT])
