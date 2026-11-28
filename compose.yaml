@@ -1,0 +1,49 @@
+# Local development only: DEBUG is on and the old query screen is not safe to expose.
+name: careerpath
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: careerpathdb
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # -h forces TCP: the temporary server used during first-time setup doesn't listen on it.
+      test: ["CMD", "pg_isready", "-h", "localhost", "-U", "postgres", "-d", "careerpathdb"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: .
+    command: sh -c "python manage.py migrate && exec python manage.py runserver 0.0.0.0:8000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY in .env}
+      DEBUG: "True"
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: careerpathdb
+      DB_USER: postgres
+      DB_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:8000:8000"  # this computer only
+    depends_on:
+      db:
+        condition: service_healthy
+    develop:
+      watch:
+        # Folder by folder: syncing "." also copies .env, data/ etc., despite .dockerignore.
+        - { action: sync, path: ./Careerpath, target: /app/Careerpath }
+        - { action: sync, path: ./careerapp, target: /app/careerapp }
+        - { action: sync, path: ./careers, target: /app/careers }
+        - { action: sync, path: ./tests, target: /app/tests }
+        - { action: rebuild, path: requirements.txt }
+        - { action: rebuild, path: requirements-dev.txt }
+        - { action: rebuild, path: pyproject.toml }
+        - { action: rebuild, path: manage.py }
+
+volumes:
+  pgdata:

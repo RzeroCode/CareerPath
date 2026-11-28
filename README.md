@@ -32,7 +32,28 @@ Sources: [YÖK Atlas](https://yokatlas.yok.gov.tr), [TÜİK](https://www.tuik.go
 
 The query screen still runs on an older 2021 dataset (`companyInsert.sql`). It is out of date and will be removed once the new version replaces it.
 
-## Installation
+## Run with Docker
+For local development; needs only Docker with Compose. The database is a separate one inside Docker, so it starts empty.
+
+1. Copy `.env.example` to `.env` and set `SECRET_KEY` (any long random string; avoid `$`) and `DB_PASSWORD` (pick one; avoid `$`).
+2. Start the app, then open http://localhost:8000. With `--watch`, code changes are copied into the running container:
+   ```
+   docker compose up --build --watch
+   ```
+3. In a second terminal, as needed:
+   ```
+   docker compose exec web python manage.py createsuperuser   # login for /admin/
+   docker compose exec web pytest
+   ```
+   Optional: load the old 2021 data. Only the query screen uses it, and its searches fail without it:
+   ```
+   docker compose cp companyInsert.sql db:/tmp/companyInsert.sql
+   docker compose exec db psql -U postgres -d careerpathdb -v ON_ERROR_STOP=1 -c "create table companies(company jsonb);" -f /tmp/companyInsert.sql
+   ```
+
+`docker compose down` stops the app and keeps the data; `docker compose down -v` deletes it. `DB_PASSWORD` only takes effect when the database is first created.
+
+## Installation without Docker
 Needs Python 3.12 and PostgreSQL (any recent version).
 
 1. Create a virtual environment and install the pinned dependencies:
@@ -63,4 +84,4 @@ pip install -r requirements-dev.txt
 ruff check .
 pytest
 ```
-`pytest` needs the PostgreSQL server from step 3 running. CI (`.github/workflows/ci.yml`) runs these checks plus `manage.py check --deploy` and `makemigrations --check` against a Postgres service on every push.
+`pytest` needs the PostgreSQL server from step 3 running. CI (`.github/workflows/ci.yml`) runs these checks plus `manage.py check --deploy` and `makemigrations --check` against a Postgres service on every push. It also builds and starts the Docker setup, loads the home page and runs `pytest` inside it.

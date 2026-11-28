@@ -36,3 +36,17 @@ jobs:
       - run: python manage.py check --deploy --fail-level ERROR
       - run: python manage.py makemigrations --check --dry-run
       - run: pytest
+
+  docker:
+    runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: ci-only-not-secret
+      DB_PASSWORD: postgres
+    steps:
+      - uses: actions/checkout@v7
+      - run: docker compose up --build --detach --wait
+      # --wait doesn't cover the web server (migrations run first), so retry until it answers.
+      - run: curl --fail --silent --show-error --retry 30 --retry-delay 2 --retry-all-errors --output /dev/null http://localhost:8000/
+      - run: docker compose exec -T web pytest
+      - if: failure()
+        run: docker compose logs

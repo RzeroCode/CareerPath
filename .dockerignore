@@ -1,0 +1,12 @@
+# Allow-list: only these reach the image, so .env, data and other local files can't slip in.
+# Add new top-level app folders here and to the watch list in compose.yaml.
+*
+!manage.py
+!pyproject.toml
+!requirements.txt
+!requirements-dev.txt
+!Careerpath
+!careerapp
+!careers
+!tests
+**/__pycache__
