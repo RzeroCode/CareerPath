@@ -28,7 +28,7 @@ def _plain(text):
 
 
 # A sentence or line asks for a degree when it has one of these.
-MARKER = re.compile(r"(?<!\d )\bdegree|\bdiploma|\b(bs|bsc|beng|ms|msc|meng|phd)\b|\bbachelor|\bmasters?\b|\bmaster's|\bundergraduate"
+MARKER = re.compile(r"(?<!\d )\bdegree|\bdiploma|\b(bs|bsc|beng|ba|ms|msc|meng|ma|mba|phd)\b|\bbachelor|\bmasters?\b|\bmaster's|\bundergraduate"
                     r"|\buniversit|\bstudent|\bgraduat|\brelated (field|discipline|area)|\blisans|\bmezun|\bogrenci|\bbolumlerinden")
 # Only these levels on offer -> the program types (bachelor's) don't apply.
 VOCATIONAL = re.compile(r"\bmeslek lisesi|\bmeslek yuksek|\bmyo\b|\bon ?lisans|\bassociate degree|\bassociate's")
@@ -36,6 +36,7 @@ BACHELOR = re.compile(r"\bbachelor|\b(bs|bsc|beng)\b|\bundergraduate|\buniversit
 LINE_END = re.compile(r"[\r\n•·●▪]")  # split before _plain(), which joins lines
 SENTENCE_END = re.compile(r"[.!?;]+(?:\s|$)")
 LIST_SEP = r"(?:,|/|\bor\b|\band\b|\bveya\b|\bve\b|\bya da\b)"
+LIST_ITEM = r"(?!(?:or|and|veya|ve|ya)\b)[\w']+"
 
 
 class DegreeMatcher:
@@ -51,10 +52,13 @@ class DegreeMatcher:
         for key, names in programs:
             for name in {_plain(n) for n in names if n and n.strip()}:
                 words = name.split()
-                pattern = r"\b" + re.escape(name)  # no end boundary: Turkish suffixes (Mühendisliği'nden)
+                # A one-word name must be a whole word ("Law" is not "lawn"). Longer names may take a suffix,
+                # as Turkish writes them (Mühendisliğinden).
+                pattern = r"\b" + re.escape(name) + (r"\b" if len(words) == 1 else "")
                 if len(words) == 2:
                     stem, head = words
-                    pattern += rf"|\b{re.escape(stem)}(?:(?:\s*{LIST_SEP})+\s*[\w']+){{1,6}}\s+{re.escape(head)}"
+                    # Atomic group, and items that are not separator words: no catastrophic backtracking.
+                    pattern += rf"|\b{re.escape(stem)}(?>(?:(?:\s*{LIST_SEP})+\s*{LIST_ITEM}){{1,6}})\s+{re.escape(head)}"
                 self.patterns.append((key, re.compile(pattern)))
 
     def match(self, description):

@@ -64,3 +64,30 @@ match = DegreeMatcher(PROGRAMS).match
 ])
 def test_degree_matcher(text, expected):
     assert match(text) == expected
+
+
+OTHER = DegreeMatcher([("LAW", ["Law", "Hukuk"]), ("ART", ["Art"]), ("BA", ["Business Administration", "İşletme"]),
+                       ("IE", ["Industrial Engineering"]), ("NUR", ["Nursing", "Hemşirelik"])]).match
+
+
+@pytest.mark.parametrize("text, expected", [
+    ("Degree: lawn care experience", set()),
+    ("Degree preferred, experience in artificial intelligence", set()),
+    ("Bachelor's degree in Law", {"LAW"}),
+    ("Hukuk Fakültesi mezunu", {"LAW"}),
+    ("BA in Business Administration", {"BA"}),
+    ("MBA or MA in Law", {"LAW"}),
+    ("İşletme bölümü lisans mezunu", {"BA"}),
+    ("Hemşirelik lisans mezunu", {"NUR"}),
+    ("Degree in Industrial or Mechanical Engineering", {"IE"}),
+])
+def test_other_fields_one_word_names_need_a_whole_word(text, expected):
+    assert OTHER(text) == expected
+
+
+def test_long_separator_chains_stay_fast():
+    import time
+    start = time.perf_counter()
+    match("degree mechanical" + " or" * 300 + " x")
+    match("degree mechanical" + ", and" * 300 + " x")
+    assert time.perf_counter() - start < 0.5
