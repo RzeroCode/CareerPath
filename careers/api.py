@@ -2,7 +2,7 @@
 
 Docs: /api/docs (OpenAPI schema at /api/openapi.json). Every response number carries its evidence.
 """
-from datetime import date
+from datetime import date, datetime
 from typing import Annotated, Literal
 
 from django.contrib.postgres.search import TrigramStrictWordSimilarity
@@ -10,6 +10,7 @@ from django.db import connection
 from django.db.models import Case, F, Func, Q, Value, When
 from django.db.models.functions import Greatest, Lower
 from django.middleware.csrf import get_token
+from django.shortcuts import get_object_or_404
 from ninja import Field, NinjaAPI, Query, Schema
 from ninja.errors import HttpError, ValidationError
 from ninja.throttling import AnonRateThrottle
@@ -17,8 +18,8 @@ from ninja.utils import check_csrf
 from pydantic import ConfigDict
 
 from careers.engine import Profile, ProfileError, recommend
-from careers.matching import norm
-from careers.models import Company, Field as FieldModel, ProgramType, Skill, University
+from careers.matching import norm, tr_key
+from careers.models import Company, Field as FieldModel, Program, ProgramType, Skill, University
 
 api = NinjaAPI(
     title="CareerPath API",
@@ -168,6 +169,54 @@ class SearchOut(Schema):
     results: dict[Kind, list[Ref]] = Field(description="Best matches first; at most 20 per kind")
 
 
+class SourceOut(Schema):
+    name: str
+    url: str
+    licence: str
+    fetched_at: datetime | None
+
+
+class UniversityProgram(Schema):
+    program_type: Ref
+    name_tr: str = Field(description="Full name as YÖK Atlas lists it, e.g. with language")
+
+
+class UniversityOut(Schema):
+    id: int
+    name: str
+    name_tr: str
+    city: str
+    kind: str = Field(description="state, foundation, or empty when unknown")
+    programs: list[UniversityProgram] = Field(description="Turkish alphabetical order")
+    source: SourceOut
+
+
+class ProgramTypeOut(Schema):
+    id: int
+    name: str
+    name_tr: str
+    field: Ref | None
+    universities: list[Ref] = Field(description="Universities offering it, Turkish alphabetical order")
+    source: SourceOut
+
+
+class CompanyOut(Schema):
+    id: int
+    name: str
+    sector: str
+    last_fetched: date | None = Field(description="When its job board was last read in full")
+    source: SourceOut
+
+
+class SkillOut(Schema):
+    id: int
+    name: str
+    name_tr: str
+    onet_hot: bool = Field(description="O*NET (US) Hot Technology")
+    esco_uri: str | None
+    source: SourceOut
+
+
 # --- endpoints ----------------------------------------------------------------------------------
 
 @api.get("/v1/csrf", response=CsrfOut, summary="Get a CSRF token",
@@ -219,3 +268,39 @@ def _search(model, query):
                                    When(contains, then=Value(1)), default=Value(0)))
     found = contains | Q(sim__gte=MIN_SIMILARITY) if len(query) >= MIN_FUZZY_LENGTH else contains
     return list(rows.filter(found).order_by("-rank", "-sim", "name")[:SEARCH_LIMIT])
+
+
+# --- detail: who is this. Numbers (outcomes, postings, skills) come from /recommendations with the same id. ---
+
+DETAIL_ERRORS = {404: ErrorOut, 429: ErrorOut}
+
+
+def _ref(obj):
+    return {"id": obj.pk, "name": obj.name, "name_tr": getattr(obj, "name_tr", "")}
+
+
+@api.get("/v1/universities/{int:id}", response={200: UniversityOut, **DETAIL_ERRORS}, summary="A university")
+def university(request, id: int):
+    uni = get_object_or_404(University.objects.select_related("source"), pk=id)
+    programs = sorted(Program.objects.filter(university=uni).select_related("program_type"),
+                      key=lambda p: tr_key(p.name_tr))
+    return {**_ref(uni), "city": uni.city, "kind": uni.kind, "source": uni.source,
+            "programs": [{"program_type": _ref(p.program_type), "name_tr": p.name_tr} for p in programs]}
+
+
+@api.get("/v1/program-types/{int:id}", response={200: ProgramTypeOut, **DETAIL_ERRORS}, summary="A program type")
+def program_type(request, id: int):
+    pt = get_object_or_404(ProgramType.objects.select_related("source", "field"), pk=id)
+    universities = sorted(University.objects.filter(programs__program_type=pt).distinct(), key=lambda u: tr_key(u.name))
+    return {**_ref(pt), "field": _ref(pt.field) if pt.field else None, "source": pt.source,
+            "universities": [_ref(u) for u in universities]}
+
+
+@api.get("/v1/companies/{int:id}", response={200: CompanyOut, **DETAIL_ERRORS}, summary="A company")
+def company(request, id: int):
+    return get_object_or_404(Company.objects.select_related("source"), pk=id)
+
+
+@api.get("/v1/skills/{int:id}", response={200: SkillOut, **DETAIL_ERRORS}, summary="A skill")
+def skill(request, id: int):
+    return get_object_or_404(Skill.objects.select_related("source"), pk=id)
