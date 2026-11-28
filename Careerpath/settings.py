@@ -47,6 +47,7 @@ ALLOWED_HOSTS = [h.strip() for h in os.environ.get('ALLOWED_HOSTS', '').split(',
 
 INSTALLED_APPS = [
     'careerapp',
+    'careers',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+if (BASE_DIR / 'ingest' / '__init__.py').exists():  # private data-collection app, not part of this repository
+    INSTALLED_APPS.append('ingest')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
