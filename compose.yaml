@@ -42,6 +42,8 @@ services:
         - { action: sync, path: ./tests, target: /app/tests }
         - { action: rebuild, path: requirements.txt }
         - { action: rebuild, path: requirements-dev.txt }
+        - { action: rebuild, path: pyproject.toml }
+        - { action: rebuild, path: manage.py }
 
 volumes:
   pgdata:

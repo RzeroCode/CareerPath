@@ -48,7 +48,7 @@ For local development; needs only Docker with Compose. The database is a separat
    Optional: load the old 2021 data. Only the query screen uses it, and its searches fail without it:
    ```
    docker compose cp companyInsert.sql db:/tmp/companyInsert.sql
-   docker compose exec db psql -U postgres -d careerpathdb -c "create table companies(company jsonb);" -f /tmp/companyInsert.sql
+   docker compose exec db psql -U postgres -d careerpathdb -v ON_ERROR_STOP=1 -c "create table companies(company jsonb);" -f /tmp/companyInsert.sql
    ```
 
 `docker compose down` stops the app and keeps the data; `docker compose down -v` deletes it. `DB_PASSWORD` only takes effect when the database is first created.
